@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiesn.springboot.mapper.AdultMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xiesn.springboot.entity.Adult">
+        <result column="CHIL_ID" property="chilId" />
+        <result column="CHIL_CODE" property="chilCode" />
+        <result column="CHIL_CARDNO" property="chilCardno" />
+        <result column="CHIL_CARDDATE" property="chilCarddate" />
+        <result column="CHIL_NAME" property="chilName" />
+        <result column="CHIL_SEX" property="chilSex" />
+        <result column="CHIL_NO" property="chilNo" />
+        <result column="CHIL_BIRTHNO" property="chilBirthno" />
+        <result column="CHIL_BIRTHDAY" property="chilBirthday" />
+        <result column="CHIL_BIRTHWEIGHT" property="chilBirthweight" />
+        <result column="CHIL_FETUS" property="chilFetus" />
+        <result column="CHIL_NATI_ID" property="chilNatiId" />
+        <result column="CHIL_MOTHER" property="chilMother" />
+        <result column="CHIL_MOTHERCORP" property="chilMothercorp" />
+        <result column="CHIL_MOTHERTEL" property="chilMothertel" />
+        <result column="CHIL_MOTHERMOBILE" property="chilMothermobile" />
+        <result column="CHIL_FATHER" property="chilFather" />
+        <result column="CHIL_FATHERCORP" property="chilFathercorp" />
+        <result column="CHIL_FATHERTEL" property="chilFathertel" />
+        <result column="CHIL_FATHERMOBILE" property="chilFathermobile" />
+        <result column="CHIL_BIRTHHOSPITAL" property="chilBirthhospital" />
+        <result column="CHIL_ZONE_ID" property="chilZoneId" />
+        <result column="CHIL_RESIDENCE" property="chilResidence" />
+        <result column="CHIL_ADDRESS" property="chilAddress" />
+        <result column="CHIL_HABI_ID" property="chilHabiId" />
+        <result column="CHIL_HABIADDRESS" property="chilHabiaddress" />
+        <result column="CHIL_TEL" property="chilTel" />
+        <result column="CHIL_MOBILE" property="chilMobile" />
+        <result column="CHIL_EMAIL" property="chilEmail" />
+        <result column="CHIL_INFECTION" property="chilInfection" />
+        <result column="CHIL_SENSITIVITY" property="chilSensitivity" />
+        <result column="CHIL_AEFI" property="chilAefi" />
+        <result column="CHIL_MOTHERHB" property="chilMotherhb" />
+        <result column="CHIL_ISTABU" property="chilIstabu" />
+        <result column="CHIL_TABU" property="chilTabu" />
+        <result column="CHIL_KINDDATE" property="chilKinddate" />
+        <result column="CHIL_KIND_ID" property="chilKindId" />
+        <result column="CHIL_HERE" property="chilHere" />
+        <result column="CHIL_LEAVEDATE" property="chilLeavedate" />
+        <result column="CHIL_LEAVE" property="chilLeave" />
+        <result column="CHIL_CURDEPARTMENT" property="chilCurdepartment" />
+        <result column="CHIL_PREDEPARTMENT" property="chilPredepartment" />
+        <result column="CHIL_EDITSTATE" property="chilEditstate" />
+        <result column="CHIL_CHANGEDATE" property="chilChangedate" />
+        <result column="CHIL_UPLOADDATE" property="chilUploaddate" />
+        <result column="CHIL_INOCULATESTATE" property="chilInoculatestate" />
+        <result column="CHIL_CREATECOUNTY" property="chilCreatecounty" />
+        <result column="CHIL_CREATESITE" property="chilCreatesite" />
+        <result column="CHIL_CREATEDATE" property="chilCreatedate" />
+        <result column="CHIL_CREATEMAN" property="chilCreateman" />
+        <result column="CHIL_ELEMENTARY" property="chilElementary" />
+        <result column="CHIL_JUNIOR" property="chilJunior" />
+        <result column="CHIL_REMARK" property="chilRemark" />
+        <result column="CHIL_CUSTOMCODE" property="chilCustomcode" />
+        <result column="CHIL_NOBACTERIN" property="chilNobacterin" />
+        <result column="CHIL_INOCNO" property="chilInocno" />
+        <result column="CHIL_INOCDATE" property="chilInocdate" />
+        <result column="CHIL_INOCSTATE" property="chilInocstate" />
+        <result column="CHIL_MOTHERHIV" property="chilMotherhiv" />
+        <result column="CHIL_CHILDHIV" property="chilChildhiv" />
+        <result column="CHIL_BOOKINGPRINTDATE" property="chilBookingprintdate" />
+        <result column="CHIL_HOSPITALLEVEL" property="chilHospitallevel" />
+        <result column="CHIL_SERVERLISTSTATE" property="chilServerliststate" />
+        <result column="CHIL_INOCFEETIME" property="chilInocfeetime" />
+        <result column="CHIL_REINFORCEYEARS" property="chilReinforceyears" />
+        <result column="CHIL_ARRIVEDATE" property="chilArrivedate" />
+        <result column="CHIL_INOCUPLOADDATE" property="chilInocuploaddate" />
+        <result column="CHIL_ISMESSAGE" property="chilIsmessage" />
+        <result column="CHIL_EDITMAN" property="chilEditman" />
+        <result column="CHIL_SELECTBACTERIN" property="chilSelectbacterin" />
+        <result column="CHIL_MESSAGEAPPRIZE" property="chilMessageapprize" />
+        <result column="CHIL_REPEAT" property="chilRepeat" />
+        <result column="CHIL_ELEMENTARYSCHOOL" property="chilElementaryschool" />
+        <result column="CHIL_JUNIORHIGHSCHOOL" property="chilJuniorhighschool" />
+        <result column="CHIL_UNIVERSITY" property="chilUniversity" />
+        <result column="CHIL_SCHOOLCLASS" property="chilSchoolclass" />
+        <result column="CHIL_UNIVERSITYDATE" property="chilUniversitydate" />
+        <result column="CHIL_MESSAGETIME" property="chilMessagetime" />
+        <result column="CHIL_OCCUP" property="chilOccup" />
+        <result column="CHIL_UNITIMMU" property="chilUnitimmu" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CHIL_ID, CHIL_CODE, CHIL_CARDNO, CHIL_CARDDATE, CHIL_NAME, CHIL_SEX, CHIL_NO, CHIL_BIRTHNO, CHIL_BIRTHDAY, CHIL_BIRTHWEIGHT, CHIL_FETUS, CHIL_NATI_ID, CHIL_MOTHER, CHIL_MOTHERCORP, CHIL_MOTHERTEL, CHIL_MOTHERMOBILE, CHIL_FATHER, CHIL_FATHERCORP, CHIL_FATHERTEL, CHIL_FATHERMOBILE, CHIL_BIRTHHOSPITAL, CHIL_ZONE_ID, CHIL_RESIDENCE, CHIL_ADDRESS, CHIL_HABI_ID, CHIL_HABIADDRESS, CHIL_TEL, CHIL_MOBILE, CHIL_EMAIL, CHIL_INFECTION, CHIL_SENSITIVITY, CHIL_AEFI, CHIL_MOTHERHB, CHIL_ISTABU, CHIL_TABU, CHIL_KINDDATE, CHIL_KIND_ID, CHIL_HERE, CHIL_LEAVEDATE, CHIL_LEAVE, CHIL_CURDEPARTMENT, CHIL_PREDEPARTMENT, CHIL_EDITSTATE, CHIL_CHANGEDATE, CHIL_UPLOADDATE, CHIL_INOCULATESTATE, CHIL_CREATECOUNTY, CHIL_CREATESITE, CHIL_CREATEDATE, CHIL_CREATEMAN, CHIL_ELEMENTARY, CHIL_JUNIOR, CHIL_REMARK, CHIL_CUSTOMCODE, CHIL_NOBACTERIN, CHIL_INOCNO, CHIL_INOCDATE, CHIL_INOCSTATE, CHIL_MOTHERHIV, CHIL_CHILDHIV, CHIL_BOOKINGPRINTDATE, CHIL_HOSPITALLEVEL, CHIL_SERVERLISTSTATE, CHIL_INOCFEETIME, CHIL_REINFORCEYEARS, CHIL_ARRIVEDATE, CHIL_INOCUPLOADDATE, CHIL_ISMESSAGE, CHIL_EDITMAN, CHIL_SELECTBACTERIN, CHIL_MESSAGEAPPRIZE, CHIL_REPEAT, CHIL_ELEMENTARYSCHOOL, CHIL_JUNIORHIGHSCHOOL, CHIL_UNIVERSITY, CHIL_SCHOOLCLASS, CHIL_UNIVERSITYDATE, CHIL_MESSAGETIME, CHIL_OCCUP, CHIL_UNITIMMU
+    </sql>
+
+</mapper>

@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiesn.springboot.mapper.ChildMapper">
+    <resultMap type="com.xiesn.springboot.entity.Child" id="ChildMap">
+        <result property="chilId" column="CHIL_ID" jdbcType="INTEGER"/>
+        <result property="chilCode" column="CHIL_CODE" jdbcType="VARCHAR"/>
+        <result property="chilCardno" column="CHIL_CARDNO" jdbcType="VARCHAR"/>
+        <result property="chilCarddate" column="CHIL_CARDDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilName" column="CHIL_NAME" jdbcType="VARCHAR"/>
+        <result property="chilSex" column="CHIL_SEX" jdbcType="VARCHAR"/>
+        <result property="chilNo" column="CHIL_NO" jdbcType="VARCHAR"/>
+        <result property="chilBirthno" column="CHIL_BIRTHNO" jdbcType="VARCHAR"/>
+        <result property="chilBirthday" column="CHIL_BIRTHDAY" jdbcType="TIMESTAMP"/>
+        <result property="chilBirthweight" column="CHIL_BIRTHWEIGHT" jdbcType="VARCHAR"/>
+        <result property="chilFetus" column="CHIL_FETUS" jdbcType="VARCHAR"/>
+        <result property="chilNatiId" column="CHIL_NATI_ID" jdbcType="INTEGER"/>
+        <result property="chilMother" column="CHIL_MOTHER" jdbcType="VARCHAR"/>
+        <result property="chilMothercorp" column="CHIL_MOTHERCORP" jdbcType="VARCHAR"/>
+        <result property="chilMothertel" column="CHIL_MOTHERTEL" jdbcType="VARCHAR"/>
+        <result property="chilMothermobile" column="CHIL_MOTHERMOBILE" jdbcType="VARCHAR"/>
+        <result property="chilFather" column="CHIL_FATHER" jdbcType="VARCHAR"/>
+        <result property="chilFathercorp" column="CHIL_FATHERCORP" jdbcType="VARCHAR"/>
+        <result property="chilFathertel" column="CHIL_FATHERTEL" jdbcType="VARCHAR"/>
+        <result property="chilFathermobile" column="CHIL_FATHERMOBILE" jdbcType="VARCHAR"/>
+        <result property="chilBirthhospital" column="CHIL_BIRTHHOSPITAL" jdbcType="VARCHAR"/>
+        <result property="chilZoneId" column="CHIL_ZONE_ID" jdbcType="VARCHAR"/>
+        <result property="chilResidence" column="CHIL_RESIDENCE" jdbcType="INTEGER"/>
+        <result property="chilAddress" column="CHIL_ADDRESS" jdbcType="VARCHAR"/>
+        <result property="chilHabiId" column="CHIL_HABI_ID" jdbcType="INTEGER"/>
+        <result property="chilHabiaddress" column="CHIL_HABIADDRESS" jdbcType="VARCHAR"/>
+        <result property="chilTel" column="CHIL_TEL" jdbcType="VARCHAR"/>
+        <result property="chilMobile" column="CHIL_MOBILE" jdbcType="VARCHAR"/>
+        <result property="chilEmail" column="CHIL_EMAIL" jdbcType="VARCHAR"/>
+        <result property="chilInfection" column="CHIL_INFECTION" jdbcType="VARCHAR"/>
+        <result property="chilSensitivity" column="CHIL_SENSITIVITY" jdbcType="VARCHAR"/>
+        <result property="chilAefi" column="CHIL_AEFI" jdbcType="VARCHAR"/>
+        <result property="chilMotherhb" column="CHIL_MOTHERHB" jdbcType="VARCHAR"/>
+        <result property="chilIstabu" column="CHIL_ISTABU" jdbcType="VARCHAR"/>
+        <result property="chilTabu" column="CHIL_TABU" jdbcType="VARCHAR"/>
+        <result property="chilKinddate" column="CHIL_KINDDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilKindId" column="CHIL_KIND_ID" jdbcType="INTEGER"/>
+        <result property="chilHere" column="CHIL_HERE" jdbcType="VARCHAR"/>
+        <result property="chilAccount" column="CHIL_ACCOUNT" jdbcType="VARCHAR"/>
+        <result property="chilLeavedate" column="CHIL_LEAVEDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilLeave" column="CHIL_LEAVE" jdbcType="VARCHAR"/>
+        <result property="chilCurdepartment" column="CHIL_CURDEPARTMENT" jdbcType="VARCHAR"/>
+        <result property="chilPredepartment" column="CHIL_PREDEPARTMENT" jdbcType="VARCHAR"/>
+        <result property="chilEditstate" column="CHIL_EDITSTATE" jdbcType="VARCHAR"/>
+        <result property="chilChangedate" column="CHIL_CHANGEDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilUploaddate" column="CHIL_UPLOADDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilInoculatestate" column="CHIL_INOCULATESTATE" jdbcType="VARCHAR"/>
+        <result property="chilCreatecounty" column="CHIL_CREATECOUNTY" jdbcType="INTEGER"/>
+        <result property="chilCreatesite" column="CHIL_CREATESITE" jdbcType="VARCHAR"/>
+        <result property="chilCreatedate" column="CHIL_CREATEDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilCreateman" column="CHIL_CREATEMAN" jdbcType="VARCHAR"/>
+        <result property="chilElementary" column="CHIL_ELEMENTARY" jdbcType="TIMESTAMP"/>
+        <result property="chilJunior" column="CHIL_JUNIOR" jdbcType="TIMESTAMP"/>
+        <result property="chilRemark" column="CHIL_REMARK" jdbcType="VARCHAR"/>
+        <result property="chilCustomcode" column="CHIL_CUSTOMCODE" jdbcType="VARCHAR"/>
+        <result property="chilNobacterin" column="CHIL_NOBACTERIN" jdbcType="VARCHAR"/>
+        <result property="chilInocno" column="CHIL_INOCNO" jdbcType="INTEGER"/>
+        <result property="chilInocdate" column="CHIL_INOCDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilInocstate" column="CHIL_INOCSTATE" jdbcType="VARCHAR"/>
+        <result property="chilMotherhiv" column="CHIL_MOTHERHIV" jdbcType="VARCHAR"/>
+        <result property="chilChildhiv" column="CHIL_CHILDHIV" jdbcType="VARCHAR"/>
+        <result property="chilBookingprintdate" column="CHIL_BOOKINGPRINTDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilHospitallevel" column="CHIL_HOSPITALLEVEL" jdbcType="VARCHAR"/>
+        <result property="chilServerliststate" column="CHIL_SERVERLISTSTATE" jdbcType="VARCHAR"/>
+        <result property="chilInocfeetime" column="CHIL_INOCFEETIME" jdbcType="TIMESTAMP"/>
+        <result property="chilReinforceyears" column="CHIL_REINFORCEYEARS" jdbcType="VARCHAR"/>
+        <result property="chilArrivedate" column="CHIL_ARRIVEDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilInocuploaddate" column="CHIL_INOCUPLOADDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilIsmessage" column="CHIL_ISMESSAGE" jdbcType="VARCHAR"/>
+        <result property="chilEditman" column="CHIL_EDITMAN" jdbcType="VARCHAR"/>
+        <result property="chilSelectbacterin" column="CHIL_SELECTBACTERIN" jdbcType="VARCHAR"/>
+        <result property="chilMessageapprize" column="CHIL_MESSAGEAPPRIZE" jdbcType="VARCHAR"/>
+        <result property="chilRepeat" column="CHIL_REPEAT" jdbcType="VARCHAR"/>
+        <result property="chilElementaryschool" column="CHIL_ELEMENTARYSCHOOL" jdbcType="INTEGER"/>
+        <result property="chilJuniorhighschool" column="CHIL_JUNIORHIGHSCHOOL" jdbcType="INTEGER"/>
+        <result property="chilUniversity" column="CHIL_UNIVERSITY" jdbcType="INTEGER"/>
+        <result property="chilSchoolclass" column="CHIL_SCHOOLCLASS" jdbcType="VARCHAR"/>
+        <result property="chilUniversitydate" column="CHIL_UNIVERSITYDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilMessagetime" column="CHIL_MESSAGETIME" jdbcType="TIMESTAMP"/>
+        <result property="chilOccup" column="CHIL_OCCUP" jdbcType="VARCHAR"/>
+        <result property="chilUnitimmu" column="CHIL_UNITIMMU" jdbcType="VARCHAR"/>
+        <result property="chilHealthno" column="CHIL_HEALTHNO" jdbcType="VARCHAR"/>
+        <result property="chilEditDate" column="CHIL_EDIT_DATE" jdbcType="TIMESTAMP"/>
+        <result property="chilCarddepaid" column="CHIL_CARDDEPAID" jdbcType="VARCHAR"/>
+        <result property="chilCityno" column="CHIL_CITYNO" jdbcType="VARCHAR"/>
+        <result property="chilTicketdepaid" column="CHIL_TICKETDEPAID" jdbcType="VARCHAR"/>
+        <result property="chilTicketno" column="CHIL_TICKETNO" jdbcType="VARCHAR"/>
+        <result property="chilTicketdate" column="CHIL_TICKETDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilMotherno" column="CHIL_MOTHERNO" jdbcType="VARCHAR"/>
+        <result property="chilFatherno" column="CHIL_FATHERNO" jdbcType="VARCHAR"/>
+        <result property="chilBcgScar" column="CHIL_BCG_SCAR" jdbcType="VARCHAR"/>
+        <result property="chilResidenceclient" column="CHIL_RESIDENCECLIENT" jdbcType="VARCHAR"/>
+        <result property="chilAttributive" column="CHIL_ATTRIBUTIVE" jdbcType="VARCHAR"/>
+        <result property="chilHepbintime" column="CHIL_HEPBINTIME" jdbcType="VARCHAR"/>
+        <result property="chilLeaveremark" column="CHIL_LEAVEREMARK" jdbcType="VARCHAR"/>
+        <result property="chilTranscontrol" column="CHIL_TRANSCONTROL" jdbcType="VARCHAR"/>
+        <result property="chilAddressdistrict" column="CHIL_ADDRESSDISTRICT" jdbcType="VARCHAR"/>
+        <result property="chilMothercode" column="CHIL_MOTHERCODE" jdbcType="VARCHAR"/>
+        <result property="chilFathercode" column="CHIL_FATHERCODE" jdbcType="VARCHAR"/>
+        <result property="chilFlpeId" column="CHIL_FLPE_ID" jdbcType="VARCHAR"/>
+        <result property="chilProvince" column="CHIL_PROVINCE" jdbcType="VARCHAR"/>
+        <result property="chilBirthhospitalname" column="CHIL_BIRTHHOSPITALNAME" jdbcType="VARCHAR"/>
+        <result property="chilFastref" column="CHIL_FASTREF" jdbcType="INTEGER"/>
+        <result property="chilIdxUplState" column="CHIL_IDX_UPL_STATE" jdbcType="VARCHAR"/>
+        <result property="chilIdxUplErrDes" column="CHIL_IDX_UPL_ERR_DES" jdbcType="VARCHAR"/>
+        <result property="chilContactaddress" column="CHIL_CONTACTADDRESS" jdbcType="VARCHAR"/>
+        <result property="chilMotheraddress" column="CHIL_MOTHERADDRESS" jdbcType="VARCHAR"/>
+        <result property="chilFatheraddress" column="CHIL_FATHERADDRESS" jdbcType="VARCHAR"/>
+        <result property="chilBinding" column="CHIL_BINDING" jdbcType="VARCHAR"/>
+        <result property="chilMessagetype" column="CHIL_MESSAGETYPE" jdbcType="VARCHAR"/>
+        <result property="chilMessagefreeze" column="CHIL_MESSAGEFREEZE" jdbcType="VARCHAR"/>
+        <result property="chilVideCode" column="CHIL_VIDE_CODE" jdbcType="VARCHAR"/>
+        <result property="chilGuardQq" column="CHIL_GUARD_QQ" jdbcType="VARCHAR"/>
+        <result property="chilNewbornMark2" column="CHIL_NEWBORN_MARK2" jdbcType="VARCHAR"/>
+        <result property="chilAttributiveeditdate" column="CHIL_ATTRIBUTIVEEDITDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilMovetype" column="CHIL_MOVETYPE" jdbcType="VARCHAR"/>
+        <result property="chilLastinocdate" column="CHIL_LASTINOCDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilInoctype" column="CHIL_INOCTYPE" jdbcType="VARCHAR"/>
+        <result property="chilCreatetype" column="CHIL_CREATETYPE" jdbcType="VARCHAR"/>
+        <result property="chilFamily" column="CHIL_FAMILY" jdbcType="VARCHAR"/>
+        <result property="chilRelation" column="CHIL_RELATION" jdbcType="VARCHAR"/>
+        <result property="chilRelationId" column="CHIL_RELATION_ID" jdbcType="VARCHAR"/>
+        <result property="chilRelationdate" column="CHIL_RELATIONDATE" jdbcType="TIMESTAMP"/>
+        <result property="chilCaseUplState" column="CHIL_CASE_UPL_STATE" jdbcType="VARCHAR"/>
+        <result property="chilCaseUplDesc" column="CHIL_CASE_UPL_DESC" jdbcType="VARCHAR"/>
+        <result property="chilCreateType" column="CHIL_CREATE_TYPE" jdbcType="VARCHAR"/>
+        <result property="chilNameInitial" column="CHIL_NAME_INITIAL" jdbcType="VARCHAR"/>
+        <result property="chilAddressDepaCode" column="CHIL_ADDRESS_DEPA_CODE" jdbcType="VARCHAR"/>
+        <result property="chilHeight" column="CHIL_HEIGHT" jdbcType="VARCHAR"/>
+        <result property="chilPartusType" column="CHIL_PARTUS_TYPE" jdbcType="VARCHAR"/>
+        <result property="chilKind" column="CHIL_KIND" jdbcType="VARCHAR"/>
+        <result property="chilEditSite" column="CHIL_EDIT_SITE" jdbcType="VARCHAR"/>
+        <result property="chilEditSiteName" column="CHIL_EDIT_SITE_NAME" jdbcType="VARCHAR"/>
+        <result property="chilCardType" column="CHIL_CARD_TYPE" jdbcType="VARCHAR"/>
+        <result property="chilCard" column="CHIL_CARD" jdbcType="VARCHAR"/>
+        <result property="chilFathercardType" column="CHIL_FATHERCARD_TYPE" jdbcType="VARCHAR"/>
+        <result property="chilMothercardType" column="CHIL_MOTHERCARD_TYPE" jdbcType="VARCHAR"/>
+        <result property="chilVersion" column="CHIL_VERSION" jdbcType="INTEGER"/>
+        <result property="chilOtherGuardiantel" column="CHIL_OTHER_GUARDIANTEL" jdbcType="VARCHAR"/>
+        <result property="chilOtherGuardianRelation" column="CHIL_OTHER_GUARDIAN_RELATION" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ChildMap">
+        select CHIL_ID,
+               CHIL_CODE,
+               CHIL_CARDNO,
+               CHIL_CARDDATE,
+               CHIL_NAME,
+               CHIL_SEX,
+               CHIL_NO,
+               CHIL_BIRTHNO,
+               CHIL_BIRTHDAY,
+               CHIL_BIRTHWEIGHT,
+               CHIL_FETUS,
+               CHIL_NATI_ID,
+               CHIL_MOTHER,
+               CHIL_MOTHERCORP,
+               CHIL_MOTHERTEL,
+               CHIL_MOTHERMOBILE,
+               CHIL_FATHER,
+               CHIL_FATHERCORP,
+               CHIL_FATHERTEL,
+               CHIL_FATHERMOBILE,
+               CHIL_BIRTHHOSPITAL,
+               CHIL_ZONE_ID,
+               CHIL_RESIDENCE,
+               CHIL_ADDRESS,
+               CHIL_HABI_ID,
+               CHIL_HABIADDRESS,
+               CHIL_TEL,
+               CHIL_MOBILE,
+               CHIL_EMAIL,
+               CHIL_INFECTION,
+               CHIL_SENSITIVITY,
+               CHIL_AEFI,
+               CHIL_MOTHERHB,
+               CHIL_ISTABU,
+               CHIL_TABU,
+               CHIL_KINDDATE,
+               CHIL_KIND_ID,
+               CHIL_HERE,
+               CHIL_ACCOUNT,
+               CHIL_LEAVEDATE,
+               CHIL_LEAVE,
+               CHIL_CURDEPARTMENT,
+               CHIL_PREDEPARTMENT,
+               CHIL_EDITSTATE,
+               CHIL_CHANGEDATE,
+               CHIL_UPLOADDATE,
+               CHIL_INOCULATESTATE,
+               CHIL_CREATECOUNTY,
+               CHIL_CREATESITE,
+               CHIL_CREATEDATE,
+               CHIL_CREATEMAN,
+               CHIL_ELEMENTARY,
+               CHIL_JUNIOR,
+               CHIL_REMARK,
+               CHIL_CUSTOMCODE,
+               CHIL_NOBACTERIN,
+               CHIL_INOCNO,
+               CHIL_INOCDATE,
+               CHIL_INOCSTATE,
+               CHIL_MOTHERHIV,
+               CHIL_CHILDHIV,
+               CHIL_BOOKINGPRINTDATE,
+               CHIL_HOSPITALLEVEL,
+               CHIL_SERVERLISTSTATE,
+               CHIL_INOCFEETIME,
+               CHIL_REINFORCEYEARS,
+               CHIL_ARRIVEDATE,
+               CHIL_INOCUPLOADDATE,
+               CHIL_ISMESSAGE,
+               CHIL_EDITMAN,
+               CHIL_SELECTBACTERIN,
+               CHIL_MESSAGEAPPRIZE,
+               CHIL_REPEAT,
+               CHIL_ELEMENTARYSCHOOL,
+               CHIL_JUNIORHIGHSCHOOL,
+               CHIL_UNIVERSITY,
+               CHIL_SCHOOLCLASS,
+               CHIL_UNIVERSITYDATE,
+               CHIL_MESSAGETIME,
+               CHIL_OCCUP,
+               CHIL_UNITIMMU,
+               CHIL_HEALTHNO,
+               CHIL_EDIT_DATE,
+               CHIL_CARDDEPAID,
+               CHIL_CITYNO,
+               CHIL_TICKETDEPAID,
+               CHIL_TICKETNO,
+               CHIL_TICKETDATE,
+               CHIL_MOTHERNO,
+               CHIL_FATHERNO,
+               CHIL_BCG_SCAR,
+               CHIL_RESIDENCECLIENT,
+               CHIL_ATTRIBUTIVE,
+               CHIL_HEPBINTIME,
+               CHIL_LEAVEREMARK,
+               CHIL_TRANSCONTROL,
+               CHIL_ADDRESSDISTRICT,
+               CHIL_MOTHERCODE,
+               CHIL_FATHERCODE,
+               CHIL_FLPE_ID,
+               CHIL_PROVINCE,
+               CHIL_BIRTHHOSPITALNAME,
+               CHIL_FASTREF,
+               CHIL_IDX_UPL_STATE,
+               CHIL_IDX_UPL_ERR_DES,
+               CHIL_CONTACTADDRESS,
+               CHIL_MOTHERADDRESS,
+               CHIL_FATHERADDRESS,
+               CHIL_BINDING,
+               CHIL_MESSAGETYPE,
+               CHIL_MESSAGEFREEZE,
+               CHIL_VIDE_CODE,
+               CHIL_GUARD_QQ,
+               CHIL_NEWBORN_MARK2,
+               CHIL_ATTRIBUTIVEEDITDATE,
+               CHIL_MOVETYPE,
+               CHIL_LASTINOCDATE,
+               CHIL_INOCTYPE,
+               CHIL_CREATETYPE,
+               CHIL_FAMILY,
+               CHIL_RELATION,
+               CHIL_RELATION_ID,
+               CHIL_RELATIONDATE,
+               CHIL_CASE_UPL_STATE,
+               CHIL_CASE_UPL_DESC,
+               CHIL_CREATE_TYPE,
+               CHIL_NAME_INITIAL,
+               CHIL_ADDRESS_DEPA_CODE,
+               CHIL_HEIGHT,
+               CHIL_PARTUS_TYPE,
+               CHIL_KIND,
+               CHIL_EDIT_SITE,
+               CHIL_EDIT_SITE_NAME,
+               CHIL_CARD_TYPE,
+               CHIL_CARD,
+               CHIL_FATHERCARD_TYPE,
+               CHIL_MOTHERCARD_TYPE,
+               CHIL_VERSION,
+               CHIL_OTHER_GUARDIANTEL,
+               CHIL_OTHER_GUARDIAN_RELATION
+        from VACCSHENZHEN.CHILD
+        where CHIL_ID = #{chilId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ChildMap">
+        select CHIL_ID,
+               CHIL_CODE,
+               CHIL_CARDNO,
+               CHIL_CARDDATE,
+               CHIL_NAME,
+               CHIL_SEX,
+               CHIL_NO,
+               CHIL_BIRTHNO,
+               CHIL_BIRTHDAY,
+               CHIL_BIRTHWEIGHT,
+               CHIL_FETUS,
+               CHIL_NATI_ID,
+               CHIL_MOTHER,
+               CHIL_MOTHERCORP,
+               CHIL_MOTHERTEL,
+               CHIL_MOTHERMOBILE,
+               CHIL_FATHER,
+               CHIL_FATHERCORP,
+               CHIL_FATHERTEL,
+               CHIL_FATHERMOBILE,
+               CHIL_BIRTHHOSPITAL,
+               CHIL_ZONE_ID,
+               CHIL_RESIDENCE,
+               CHIL_ADDRESS,
+               CHIL_HABI_ID,
+               CHIL_HABIADDRESS,
+               CHIL_TEL,
+               CHIL_MOBILE,
+               CHIL_EMAIL,
+               CHIL_INFECTION,
+               CHIL_SENSITIVITY,
+               CHIL_AEFI,
+               CHIL_MOTHERHB,
+               CHIL_ISTABU,
+               CHIL_TABU,
+               CHIL_KINDDATE,
+               CHIL_KIND_ID,
+               CHIL_HERE,
+               CHIL_ACCOUNT,
+               CHIL_LEAVEDATE,
+               CHIL_LEAVE,
+               CHIL_CURDEPARTMENT,
+               CHIL_PREDEPARTMENT,
+               CHIL_EDITSTATE,
+               CHIL_CHANGEDATE,
+               CHIL_UPLOADDATE,
+               CHIL_INOCULATESTATE,
+               CHIL_CREATECOUNTY,
+               CHIL_CREATESITE,
+               CHIL_CREATEDATE,
+               CHIL_CREATEMAN,
+               CHIL_ELEMENTARY,
+               CHIL_JUNIOR,
+               CHIL_REMARK,
+               CHIL_CUSTOMCODE,
+               CHIL_NOBACTERIN,
+               CHIL_INOCNO,
+               CHIL_INOCDATE,
+               CHIL_INOCSTATE,
+               CHIL_MOTHERHIV,
+               CHIL_CHILDHIV,
+               CHIL_BOOKINGPRINTDATE,
+               CHIL_HOSPITALLEVEL,
+               CHIL_SERVERLISTSTATE,
+               CHIL_INOCFEETIME,
+               CHIL_REINFORCEYEARS,
+               CHIL_ARRIVEDATE,
+               CHIL_INOCUPLOADDATE,
+               CHIL_ISMESSAGE,
+               CHIL_EDITMAN,
+               CHIL_SELECTBACTERIN,
+               CHIL_MESSAGEAPPRIZE,
+               CHIL_REPEAT,
+               CHIL_ELEMENTARYSCHOOL,
+               CHIL_JUNIORHIGHSCHOOL,
+               CHIL_UNIVERSITY,
+               CHIL_SCHOOLCLASS,
+               CHIL_UNIVERSITYDATE,
+               CHIL_MESSAGETIME,
+               CHIL_OCCUP,
+               CHIL_UNITIMMU,
+               CHIL_HEALTHNO,
+               CHIL_EDIT_DATE,
+               CHIL_CARDDEPAID,
+               CHIL_CITYNO,
+               CHIL_TICKETDEPAID,
+               CHIL_TICKETNO,
+               CHIL_TICKETDATE,
+               CHIL_MOTHERNO,
+               CHIL_FATHERNO,
+               CHIL_BCG_SCAR,
+               CHIL_RESIDENCECLIENT,
+               CHIL_ATTRIBUTIVE,
+               CHIL_HEPBINTIME,
+               CHIL_LEAVEREMARK,
+               CHIL_TRANSCONTROL,
+               CHIL_ADDRESSDISTRICT,
+               CHIL_MOTHERCODE,
+               CHIL_FATHERCODE,
+               CHIL_FLPE_ID,
+               CHIL_PROVINCE,
+               CHIL_BIRTHHOSPITALNAME,
+               CHIL_FASTREF,
+               CHIL_IDX_UPL_STATE,
+               CHIL_IDX_UPL_ERR_DES,
+               CHIL_CONTACTADDRESS,
+               CHIL_MOTHERADDRESS,
+               CHIL_FATHERADDRESS,
+               CHIL_BINDING,
+               CHIL_MESSAGETYPE,
+               CHIL_MESSAGEFREEZE,
+               CHIL_VIDE_CODE,
+               CHIL_GUARD_QQ,
+               CHIL_NEWBORN_MARK2,
+               CHIL_ATTRIBUTIVEEDITDATE,
+               CHIL_MOVETYPE,
+               CHIL_LASTINOCDATE,
+               CHIL_INOCTYPE,
+               CHIL_CREATETYPE,
+               CHIL_FAMILY,
+               CHIL_RELATION,
+               CHIL_RELATION_ID,
+               CHIL_RELATIONDATE,
+               CHIL_CASE_UPL_STATE,
+               CHIL_CASE_UPL_DESC,
+               CHIL_CREATE_TYPE,
+               CHIL_NAME_INITIAL,
+               CHIL_ADDRESS_DEPA_CODE,
+               CHIL_HEIGHT,
+               CHIL_PARTUS_TYPE,
+               CHIL_KIND,
+               CHIL_EDIT_SITE,
+               CHIL_EDIT_SITE_NAME,
+               CHIL_CARD_TYPE,
+               CHIL_CARD,
+               CHIL_FATHERCARD_TYPE,
+               CHIL_MOTHERCARD_TYPE,
+               CHIL_VERSION,
+               CHIL_OTHER_GUARDIANTEL,
+               CHIL_OTHER_GUARDIAN_RELATION
+        from VACCSHENZHEN.CHILD limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="ChildMap">
+        select
+        CHIL_ID, CHIL_CODE, CHIL_CARDNO, CHIL_CARDDATE, CHIL_NAME, CHIL_SEX, CHIL_NO, CHIL_BIRTHNO, CHIL_BIRTHDAY,
+        CHIL_BIRTHWEIGHT, CHIL_FETUS, CHIL_NATI_ID, CHIL_MOTHER, CHIL_MOTHERCORP, CHIL_MOTHERTEL, CHIL_MOTHERMOBILE,
+        CHIL_FATHER, CHIL_FATHERCORP, CHIL_FATHERTEL, CHIL_FATHERMOBILE, CHIL_BIRTHHOSPITAL, CHIL_ZONE_ID,
+        CHIL_RESIDENCE, CHIL_ADDRESS, CHIL_HABI_ID, CHIL_HABIADDRESS, CHIL_TEL, CHIL_MOBILE, CHIL_EMAIL, CHIL_INFECTION,
+        CHIL_SENSITIVITY, CHIL_AEFI, CHIL_MOTHERHB, CHIL_ISTABU, CHIL_TABU, CHIL_KINDDATE, CHIL_KIND_ID, CHIL_HERE,
+        CHIL_ACCOUNT, CHIL_LEAVEDATE, CHIL_LEAVE, CHIL_CURDEPARTMENT, CHIL_PREDEPARTMENT, CHIL_EDITSTATE,
+        CHIL_CHANGEDATE, CHIL_UPLOADDATE, CHIL_INOCULATESTATE, CHIL_CREATECOUNTY, CHIL_CREATESITE, CHIL_CREATEDATE,
+        CHIL_CREATEMAN, CHIL_ELEMENTARY, CHIL_JUNIOR, CHIL_REMARK, CHIL_CUSTOMCODE, CHIL_NOBACTERIN, CHIL_INOCNO,
+        CHIL_INOCDATE, CHIL_INOCSTATE, CHIL_MOTHERHIV, CHIL_CHILDHIV, CHIL_BOOKINGPRINTDATE, CHIL_HOSPITALLEVEL,
+        CHIL_SERVERLISTSTATE, CHIL_INOCFEETIME, CHIL_REINFORCEYEARS, CHIL_ARRIVEDATE, CHIL_INOCUPLOADDATE,
+        CHIL_ISMESSAGE, CHIL_EDITMAN, CHIL_SELECTBACTERIN, CHIL_MESSAGEAPPRIZE, CHIL_REPEAT, CHIL_ELEMENTARYSCHOOL,
+        CHIL_JUNIORHIGHSCHOOL, CHIL_UNIVERSITY, CHIL_SCHOOLCLASS, CHIL_UNIVERSITYDATE, CHIL_MESSAGETIME, CHIL_OCCUP,
+        CHIL_UNITIMMU, CHIL_HEALTHNO, CHIL_EDIT_DATE, CHIL_CARDDEPAID, CHIL_CITYNO, CHIL_TICKETDEPAID, CHIL_TICKETNO,
+        CHIL_TICKETDATE, CHIL_MOTHERNO, CHIL_FATHERNO, CHIL_BCG_SCAR, CHIL_RESIDENCECLIENT, CHIL_ATTRIBUTIVE,
+        CHIL_HEPBINTIME, CHIL_LEAVEREMARK, CHIL_TRANSCONTROL, CHIL_ADDRESSDISTRICT, CHIL_MOTHERCODE, CHIL_FATHERCODE,
+        CHIL_FLPE_ID, CHIL_PROVINCE, CHIL_BIRTHHOSPITALNAME, CHIL_FASTREF, CHIL_IDX_UPL_STATE, CHIL_IDX_UPL_ERR_DES,
+        CHIL_CONTACTADDRESS, CHIL_MOTHERADDRESS, CHIL_FATHERADDRESS, CHIL_BINDING, CHIL_MESSAGETYPE, CHIL_MESSAGEFREEZE,
+        CHIL_VIDE_CODE, CHIL_GUARD_QQ, CHIL_NEWBORN_MARK2, CHIL_ATTRIBUTIVEEDITDATE, CHIL_MOVETYPE, CHIL_LASTINOCDATE,
+        CHIL_INOCTYPE, CHIL_CREATETYPE, CHIL_FAMILY, CHIL_RELATION, CHIL_RELATION_ID, CHIL_RELATIONDATE,
+        CHIL_CASE_UPL_STATE, CHIL_CASE_UPL_DESC, CHIL_CREATE_TYPE, CHIL_NAME_INITIAL, CHIL_ADDRESS_DEPA_CODE,
+        CHIL_HEIGHT, CHIL_PARTUS_TYPE, CHIL_KIND, CHIL_EDIT_SITE, CHIL_EDIT_SITE_NAME, CHIL_CARD_TYPE, CHIL_CARD,
+        CHIL_FATHERCARD_TYPE, CHIL_MOTHERCARD_TYPE, CHIL_VERSION, CHIL_OTHER_GUARDIANTEL, CHIL_OTHER_GUARDIAN_RELATION
+        from VACCSHENZHEN.CHILD
+        <where>
+            <if test="chilId != null">
+                and CHIL_ID = #{chilId}
+            </if>
+            <if test="chilCode != null and chilCode != ''">
+                and CHIL_CODE = #{chilCode}
+            </if>
+            <if test="chilCardno != null and chilCardno != ''">
+                and CHIL_CARDNO = #{chilCardno}
+            </if>
+            <if test="chilCarddate != null">
+                and CHIL_CARDDATE = #{chilCarddate}
+            </if>
+            <if test="chilName != null and chilName != ''">
+                and CHIL_NAME = #{chilName}
+            </if>
+            <if test="chilSex != null and chilSex != ''">
+                and CHIL_SEX = #{chilSex}
+            </if>
+            <if test="chilNo != null and chilNo != ''">
+                and CHIL_NO = #{chilNo}
+            </if>
+            <if test="chilBirthno != null and chilBirthno != ''">
+                and CHIL_BIRTHNO = #{chilBirthno}
+            </if>
+            <if test="chilBirthday != null">
+                and CHIL_BIRTHDAY = #{chilBirthday}
+            </if>
+            <if test="chilBirthweight != null and chilBirthweight != ''">
+                and CHIL_BIRTHWEIGHT = #{chilBirthweight}
+            </if>
+            <if test="chilFetus != null and chilFetus != ''">
+                and CHIL_FETUS = #{chilFetus}
+            </if>
+            <if test="chilNatiId != null">
+                and CHIL_NATI_ID = #{chilNatiId}
+            </if>
+            <if test="chilMother != null and chilMother != ''">
+                and CHIL_MOTHER = #{chilMother}
+            </if>
+            <if test="chilMothercorp != null and chilMothercorp != ''">
+                and CHIL_MOTHERCORP = #{chilMothercorp}
+            </if>
+            <if test="chilMothertel != null and chilMothertel != ''">
+                and CHIL_MOTHERTEL = #{chilMothertel}
+            </if>
+            <if test="chilMothermobile != null and chilMothermobile != ''">
+                and CHIL_MOTHERMOBILE = #{chilMothermobile}
+            </if>
+            <if test="chilFather != null and chilFather != ''">
+                and CHIL_FATHER = #{chilFather}
+            </if>
+            <if test="chilFathercorp != null and chilFathercorp != ''">
+                and CHIL_FATHERCORP = #{chilFathercorp}
+            </if>
+            <if test="chilFathertel != null and chilFathertel != ''">
+                and CHIL_FATHERTEL = #{chilFathertel}
+            </if>
+            <if test="chilFathermobile != null and chilFathermobile != ''">
+                and CHIL_FATHERMOBILE = #{chilFathermobile}
+            </if>
+            <if test="chilBirthhospital != null and chilBirthhospital != ''">
+                and CHIL_BIRTHHOSPITAL = #{chilBirthhospital}
+            </if>
+            <if test="chilZoneId != null and chilZoneId != ''">
+                and CHIL_ZONE_ID = #{chilZoneId}
+            </if>
+            <if test="chilResidence != null">
+                and CHIL_RESIDENCE = #{chilResidence}
+            </if>
+            <if test="chilAddress != null and chilAddress != ''">
+                and CHIL_ADDRESS = #{chilAddress}
+            </if>
+            <if test="chilHabiId != null">
+                and CHIL_HABI_ID = #{chilHabiId}
+            </if>
+            <if test="chilHabiaddress != null and chilHabiaddress != ''">
+                and CHIL_HABIADDRESS = #{chilHabiaddress}
+            </if>
+            <if test="chilTel != null and chilTel != ''">
+                and CHIL_TEL = #{chilTel}
+            </if>
+            <if test="chilMobile != null and chilMobile != ''">
+                and CHIL_MOBILE = #{chilMobile}
+            </if>
+            <if test="chilEmail != null and chilEmail != ''">
+                and CHIL_EMAIL = #{chilEmail}
+            </if>
+            <if test="chilInfection != null and chilInfection != ''">
+                and CHIL_INFECTION = #{chilInfection}
+            </if>
+            <if test="chilSensitivity != null and chilSensitivity != ''">
+                and CHIL_SENSITIVITY = #{chilSensitivity}
+            </if>
+            <if test="chilAefi != null and chilAefi != ''">
+                and CHIL_AEFI = #{chilAefi}
+            </if>
+            <if test="chilMotherhb != null and chilMotherhb != ''">
+                and CHIL_MOTHERHB = #{chilMotherhb}
+            </if>
+            <if test="chilIstabu != null and chilIstabu != ''">
+                and CHIL_ISTABU = #{chilIstabu}
+            </if>
+            <if test="chilTabu != null and chilTabu != ''">
+                and CHIL_TABU = #{chilTabu}
+            </if>
+            <if test="chilKinddate != null">
+                and CHIL_KINDDATE = #{chilKinddate}
+            </if>
+            <if test="chilKindId != null">
+                and CHIL_KIND_ID = #{chilKindId}
+            </if>
+            <if test="chilHere != null and chilHere != ''">
+                and CHIL_HERE = #{chilHere}
+            </if>
+            <if test="chilAccount != null and chilAccount != ''">
+                and CHIL_ACCOUNT = #{chilAccount}
+            </if>
+            <if test="chilLeavedate != null">
+                and CHIL_LEAVEDATE = #{chilLeavedate}
+            </if>
+            <if test="chilLeave != null and chilLeave != ''">
+                and CHIL_LEAVE = #{chilLeave}
+            </if>
+            <if test="chilCurdepartment != null and chilCurdepartment != ''">
+                and CHIL_CURDEPARTMENT = #{chilCurdepartment}
+            </if>
+            <if test="chilPredepartment != null and chilPredepartment != ''">
+                and CHIL_PREDEPARTMENT = #{chilPredepartment}
+            </if>
+            <if test="chilEditstate != null and chilEditstate != ''">
+                and CHIL_EDITSTATE = #{chilEditstate}
+            </if>
+            <if test="chilChangedate != null">
+                and CHIL_CHANGEDATE = #{chilChangedate}
+            </if>
+            <if test="chilUploaddate != null">
+                and CHIL_UPLOADDATE = #{chilUploaddate}
+            </if>
+            <if test="chilInoculatestate != null and chilInoculatestate != ''">
+                and CHIL_INOCULATESTATE = #{chilInoculatestate}
+            </if>
+            <if test="chilCreatecounty != null">
+                and CHIL_CREATECOUNTY = #{chilCreatecounty}
+            </if>
+            <if test="chilCreatesite != null and chilCreatesite != ''">
+                and CHIL_CREATESITE = #{chilCreatesite}
+            </if>
+            <if test="chilCreatedate != null">
+                and CHIL_CREATEDATE = #{chilCreatedate}
+            </if>
+            <if test="chilCreateman != null and chilCreateman != ''">
+                and CHIL_CREATEMAN = #{chilCreateman}
+            </if>
+            <if test="chilElementary != null">
+                and CHIL_ELEMENTARY = #{chilElementary}
+            </if>
+            <if test="chilJunior != null">
+                and CHIL_JUNIOR = #{chilJunior}
+            </if>
+            <if test="chilRemark != null and chilRemark != ''">
+                and CHIL_REMARK = #{chilRemark}
+            </if>
+            <if test="chilCustomcode != null and chilCustomcode != ''">
+                and CHIL_CUSTOMCODE = #{chilCustomcode}
+            </if>
+            <if test="chilNobacterin != null and chilNobacterin != ''">
+                and CHIL_NOBACTERIN = #{chilNobacterin}
+            </if>
+            <if test="chilInocno != null">
+                and CHIL_INOCNO = #{chilInocno}
+            </if>
+            <if test="chilInocdate != null">
+                and CHIL_INOCDATE = #{chilInocdate}
+            </if>
+            <if test="chilInocstate != null and chilInocstate != ''">
+                and CHIL_INOCSTATE = #{chilInocstate}
+            </if>
+            <if test="chilMotherhiv != null and chilMotherhiv != ''">
+                and CHIL_MOTHERHIV = #{chilMotherhiv}
+            </if>
+            <if test="chilChildhiv != null and chilChildhiv != ''">
+                and CHIL_CHILDHIV = #{chilChildhiv}
+            </if>
+            <if test="chilBookingprintdate != null">
+                and CHIL_BOOKINGPRINTDATE = #{chilBookingprintdate}
+            </if>
+            <if test="chilHospitallevel != null and chilHospitallevel != ''">
+                and CHIL_HOSPITALLEVEL = #{chilHospitallevel}
+            </if>
+            <if test="chilServerliststate != null and chilServerliststate != ''">
+                and CHIL_SERVERLISTSTATE = #{chilServerliststate}
+            </if>
+            <if test="chilInocfeetime != null">
+                and CHIL_INOCFEETIME = #{chilInocfeetime}
+            </if>
+            <if test="chilReinforceyears != null and chilReinforceyears != ''">
+                and CHIL_REINFORCEYEARS = #{chilReinforceyears}
+            </if>
+            <if test="chilArrivedate != null">
+                and CHIL_ARRIVEDATE = #{chilArrivedate}
+            </if>
+            <if test="chilInocuploaddate != null">
+                and CHIL_INOCUPLOADDATE = #{chilInocuploaddate}
+            </if>
+            <if test="chilIsmessage != null and chilIsmessage != ''">
+                and CHIL_ISMESSAGE = #{chilIsmessage}
+            </if>
+            <if test="chilEditman != null and chilEditman != ''">
+                and CHIL_EDITMAN = #{chilEditman}
+            </if>
+            <if test="chilSelectbacterin != null and chilSelectbacterin != ''">
+                and CHIL_SELECTBACTERIN = #{chilSelectbacterin}
+            </if>
+            <if test="chilMessageapprize != null and chilMessageapprize != ''">
+                and CHIL_MESSAGEAPPRIZE = #{chilMessageapprize}
+            </if>
+            <if test="chilRepeat != null and chilRepeat != ''">
+                and CHIL_REPEAT = #{chilRepeat}
+            </if>
+            <if test="chilElementaryschool != null">
+                and CHIL_ELEMENTARYSCHOOL = #{chilElementaryschool}
+            </if>
+            <if test="chilJuniorhighschool != null">
+                and CHIL_JUNIORHIGHSCHOOL = #{chilJuniorhighschool}
+            </if>
+            <if test="chilUniversity != null">
+                and CHIL_UNIVERSITY = #{chilUniversity}
+            </if>
+            <if test="chilSchoolclass != null and chilSchoolclass != ''">
+                and CHIL_SCHOOLCLASS = #{chilSchoolclass}
+            </if>
+            <if test="chilUniversitydate != null">
+                and CHIL_UNIVERSITYDATE = #{chilUniversitydate}
+            </if>
+            <if test="chilMessagetime != null">
+                and CHIL_MESSAGETIME = #{chilMessagetime}
+            </if>
+            <if test="chilOccup != null and chilOccup != ''">
+                and CHIL_OCCUP = #{chilOccup}
+            </if>
+            <if test="chilUnitimmu != null and chilUnitimmu != ''">
+                and CHIL_UNITIMMU = #{chilUnitimmu}
+            </if>
+            <if test="chilHealthno != null and chilHealthno != ''">
+                and CHIL_HEALTHNO = #{chilHealthno}
+            </if>
+            <if test="chilEditDate != null">
+                and CHIL_EDIT_DATE = #{chilEditDate}
+            </if>
+            <if test="chilCarddepaid != null and chilCarddepaid != ''">
+                and CHIL_CARDDEPAID = #{chilCarddepaid}
+            </if>
+            <if test="chilCityno != null and chilCityno != ''">
+                and CHIL_CITYNO = #{chilCityno}
+            </if>
+            <if test="chilTicketdepaid != null and chilTicketdepaid != ''">
+                and CHIL_TICKETDEPAID = #{chilTicketdepaid}
+            </if>
+            <if test="chilTicketno != null and chilTicketno != ''">
+                and CHIL_TICKETNO = #{chilTicketno}
+            </if>
+            <if test="chilTicketdate != null">
+                and CHIL_TICKETDATE = #{chilTicketdate}
+            </if>
+            <if test="chilMotherno != null and chilMotherno != ''">
+                and CHIL_MOTHERNO = #{chilMotherno}
+            </if>
+            <if test="chilFatherno != null and chilFatherno != ''">
+                and CHIL_FATHERNO = #{chilFatherno}
+            </if>
+            <if test="chilBcgScar != null and chilBcgScar != ''">
+                and CHIL_BCG_SCAR = #{chilBcgScar}
+            </if>
+            <if test="chilResidenceclient != null and chilResidenceclient != ''">
+                and CHIL_RESIDENCECLIENT = #{chilResidenceclient}
+            </if>
+            <if test="chilAttributive != null and chilAttributive != ''">
+                and CHIL_ATTRIBUTIVE = #{chilAttributive}
+            </if>
+            <if test="chilHepbintime != null and chilHepbintime != ''">
+                and CHIL_HEPBINTIME = #{chilHepbintime}
+            </if>
+            <if test="chilLeaveremark != null and chilLeaveremark != ''">
+                and CHIL_LEAVEREMARK = #{chilLeaveremark}
+            </if>
+            <if test="chilTranscontrol != null and chilTranscontrol != ''">
+                and CHIL_TRANSCONTROL = #{chilTranscontrol}
+            </if>
+            <if test="chilAddressdistrict != null and chilAddressdistrict != ''">
+                and CHIL_ADDRESSDISTRICT = #{chilAddressdistrict}
+            </if>
+            <if test="chilMothercode != null and chilMothercode != ''">
+                and CHIL_MOTHERCODE = #{chilMothercode}
+            </if>
+            <if test="chilFathercode != null and chilFathercode != ''">
+                and CHIL_FATHERCODE = #{chilFathercode}
+            </if>
+            <if test="chilFlpeId != null and chilFlpeId != ''">
+                and CHIL_FLPE_ID = #{chilFlpeId}
+            </if>
+            <if test="chilProvince != null and chilProvince != ''">
+                and CHIL_PROVINCE = #{chilProvince}
+            </if>
+            <if test="chilBirthhospitalname != null and chilBirthhospitalname != ''">
+                and CHIL_BIRTHHOSPITALNAME = #{chilBirthhospitalname}
+            </if>
+            <if test="chilFastref != null">
+                and CHIL_FASTREF = #{chilFastref}
+            </if>
+            <if test="chilIdxUplState != null and chilIdxUplState != ''">
+                and CHIL_IDX_UPL_STATE = #{chilIdxUplState}
+            </if>
+            <if test="chilIdxUplErrDes != null and chilIdxUplErrDes != ''">
+                and CHIL_IDX_UPL_ERR_DES = #{chilIdxUplErrDes}
+            </if>
+            <if test="chilContactaddress != null and chilContactaddress != ''">
+                and CHIL_CONTACTADDRESS = #{chilContactaddress}
+            </if>
+            <if test="chilMotheraddress != null and chilMotheraddress != ''">
+                and CHIL_MOTHERADDRESS = #{chilMotheraddress}
+            </if>
+            <if test="chilFatheraddress != null and chilFatheraddress != ''">
+                and CHIL_FATHERADDRESS = #{chilFatheraddress}
+            </if>
+            <if test="chilBinding != null and chilBinding != ''">
+                and CHIL_BINDING = #{chilBinding}
+            </if>
+            <if test="chilMessagetype != null and chilMessagetype != ''">
+                and CHIL_MESSAGETYPE = #{chilMessagetype}
+            </if>
+            <if test="chilMessagefreeze != null and chilMessagefreeze != ''">
+                and CHIL_MESSAGEFREEZE = #{chilMessagefreeze}
+            </if>
+            <if test="chilVideCode != null and chilVideCode != ''">
+                and CHIL_VIDE_CODE = #{chilVideCode}
+            </if>
+            <if test="chilGuardQq != null and chilGuardQq != ''">
+                and CHIL_GUARD_QQ = #{chilGuardQq}
+            </if>
+            <if test="chilNewbornMark2 != null and chilNewbornMark2 != ''">
+                and CHIL_NEWBORN_MARK2 = #{chilNewbornMark2}
+            </if>
+            <if test="chilAttributiveeditdate != null">
+                and CHIL_ATTRIBUTIVEEDITDATE = #{chilAttributiveeditdate}
+            </if>
+            <if test="chilMovetype != null and chilMovetype != ''">
+                and CHIL_MOVETYPE = #{chilMovetype}
+            </if>
+            <if test="chilLastinocdate != null">
+                and CHIL_LASTINOCDATE = #{chilLastinocdate}
+            </if>
+            <if test="chilInoctype != null and chilInoctype != ''">
+                and CHIL_INOCTYPE = #{chilInoctype}
+            </if>
+            <if test="chilCreatetype != null and chilCreatetype != ''">
+                and CHIL_CREATETYPE = #{chilCreatetype}
+            </if>
+            <if test="chilFamily != null and chilFamily != ''">
+                and CHIL_FAMILY = #{chilFamily}
+            </if>
+            <if test="chilRelation != null and chilRelation != ''">
+                and CHIL_RELATION = #{chilRelation}
+            </if>
+            <if test="chilRelationId != null and chilRelationId != ''">
+                and CHIL_RELATION_ID = #{chilRelationId}
+            </if>
+            <if test="chilRelationdate != null">
+                and CHIL_RELATIONDATE = #{chilRelationdate}
+            </if>
+            <if test="chilCaseUplState != null and chilCaseUplState != ''">
+                and CHIL_CASE_UPL_STATE = #{chilCaseUplState}
+            </if>
+            <if test="chilCaseUplDesc != null and chilCaseUplDesc != ''">
+                and CHIL_CASE_UPL_DESC = #{chilCaseUplDesc}
+            </if>
+            <if test="chilCreateType != null">
+                and CHIL_CREATE_TYPE = #{chilCreateType}
+            </if>
+            <if test="chilNameInitial != null and chilNameInitial != ''">
+                and CHIL_NAME_INITIAL = #{chilNameInitial}
+            </if>
+            <if test="chilAddressDepaCode != null and chilAddressDepaCode != ''">
+                and CHIL_ADDRESS_DEPA_CODE = #{chilAddressDepaCode}
+            </if>
+            <if test="chilHeight != null and chilHeight != ''">
+                and CHIL_HEIGHT = #{chilHeight}
+            </if>
+            <if test="chilPartusType != null and chilPartusType != ''">
+                and CHIL_PARTUS_TYPE = #{chilPartusType}
+            </if>
+            <if test="chilKind != null and chilKind != ''">
+                and CHIL_KIND = #{chilKind}
+            </if>
+            <if test="chilEditSite != null and chilEditSite != ''">
+                and CHIL_EDIT_SITE = #{chilEditSite}
+            </if>
+            <if test="chilEditSiteName != null and chilEditSiteName != ''">
+                and CHIL_EDIT_SITE_NAME = #{chilEditSiteName}
+            </if>
+            <if test="chilCardType != null and chilCardType != ''">
+                and CHIL_CARD_TYPE = #{chilCardType}
+            </if>
+            <if test="chilCard != null and chilCard != ''">
+                and CHIL_CARD = #{chilCard}
+            </if>
+            <if test="chilFathercardType != null and chilFathercardType != ''">
+                and CHIL_FATHERCARD_TYPE = #{chilFathercardType}
+            </if>
+            <if test="chilMothercardType != null and chilMothercardType != ''">
+                and CHIL_MOTHERCARD_TYPE = #{chilMothercardType}
+            </if>
+            <if test="chilVersion != null">
+                and CHIL_VERSION = #{chilVersion}
+            </if>
+            <if test="chilOtherGuardiantel != null and chilOtherGuardiantel != ''">
+                and CHIL_OTHER_GUARDIANTEL = #{chilOtherGuardiantel}
+            </if>
+            <if test="chilOtherGuardianRelation != null and chilOtherGuardianRelation != ''">
+                and CHIL_OTHER_GUARDIAN_RELATION = #{chilOtherGuardianRelation}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="chilId" useGeneratedKeys="true">
+        insert into VACCSHENZHEN.CHILD(CHIL_CODE, CHIL_CARDNO, CHIL_CARDDATE, CHIL_NAME, CHIL_SEX, CHIL_NO,
+                                       CHIL_BIRTHNO, CHIL_BIRTHDAY, CHIL_BIRTHWEIGHT, CHIL_FETUS, CHIL_NATI_ID,
+                                       CHIL_MOTHER, CHIL_MOTHERCORP, CHIL_MOTHERTEL, CHIL_MOTHERMOBILE, CHIL_FATHER,
+                                       CHIL_FATHERCORP, CHIL_FATHERTEL, CHIL_FATHERMOBILE, CHIL_BIRTHHOSPITAL,
+                                       CHIL_ZONE_ID, CHIL_RESIDENCE, CHIL_ADDRESS, CHIL_HABI_ID, CHIL_HABIADDRESS,
+                                       CHIL_TEL, CHIL_MOBILE, CHIL_EMAIL, CHIL_INFECTION, CHIL_SENSITIVITY, CHIL_AEFI,
+                                       CHIL_MOTHERHB, CHIL_ISTABU, CHIL_TABU, CHIL_KINDDATE, CHIL_KIND_ID, CHIL_HERE,
+                                       CHIL_ACCOUNT, CHIL_LEAVEDATE, CHIL_LEAVE, CHIL_CURDEPARTMENT, CHIL_PREDEPARTMENT,
+                                       CHIL_EDITSTATE, CHIL_CHANGEDATE, CHIL_UPLOADDATE, CHIL_INOCULATESTATE,
+                                       CHIL_CREATECOUNTY, CHIL_CREATESITE, CHIL_CREATEDATE, CHIL_CREATEMAN,
+                                       CHIL_ELEMENTARY, CHIL_JUNIOR, CHIL_REMARK, CHIL_CUSTOMCODE, CHIL_NOBACTERIN,
+                                       CHIL_INOCNO, CHIL_INOCDATE, CHIL_INOCSTATE, CHIL_MOTHERHIV, CHIL_CHILDHIV,
+                                       CHIL_BOOKINGPRINTDATE, CHIL_HOSPITALLEVEL, CHIL_SERVERLISTSTATE,
+                                       CHIL_INOCFEETIME, CHIL_REINFORCEYEARS, CHIL_ARRIVEDATE, CHIL_INOCUPLOADDATE,
+                                       CHIL_ISMESSAGE, CHIL_EDITMAN, CHIL_SELECTBACTERIN, CHIL_MESSAGEAPPRIZE,
+                                       CHIL_REPEAT, CHIL_ELEMENTARYSCHOOL, CHIL_JUNIORHIGHSCHOOL, CHIL_UNIVERSITY,
+                                       CHIL_SCHOOLCLASS, CHIL_UNIVERSITYDATE, CHIL_MESSAGETIME, CHIL_OCCUP,
+                                       CHIL_UNITIMMU, CHIL_HEALTHNO, CHIL_EDIT_DATE, CHIL_CARDDEPAID, CHIL_CITYNO,
+                                       CHIL_TICKETDEPAID, CHIL_TICKETNO, CHIL_TICKETDATE, CHIL_MOTHERNO, CHIL_FATHERNO,
+                                       CHIL_BCG_SCAR, CHIL_RESIDENCECLIENT, CHIL_ATTRIBUTIVE, CHIL_HEPBINTIME,
+                                       CHIL_LEAVEREMARK, CHIL_TRANSCONTROL, CHIL_ADDRESSDISTRICT, CHIL_MOTHERCODE,
+                                       CHIL_FATHERCODE, CHIL_FLPE_ID, CHIL_PROVINCE, CHIL_BIRTHHOSPITALNAME,
+                                       CHIL_FASTREF, CHIL_IDX_UPL_STATE, CHIL_IDX_UPL_ERR_DES, CHIL_CONTACTADDRESS,
+                                       CHIL_MOTHERADDRESS, CHIL_FATHERADDRESS, CHIL_BINDING, CHIL_MESSAGETYPE,
+                                       CHIL_MESSAGEFREEZE, CHIL_VIDE_CODE, CHIL_GUARD_QQ, CHIL_NEWBORN_MARK2,
+                                       CHIL_ATTRIBUTIVEEDITDATE, CHIL_MOVETYPE, CHIL_LASTINOCDATE, CHIL_INOCTYPE,
+                                       CHIL_CREATETYPE, CHIL_FAMILY, CHIL_RELATION, CHIL_RELATION_ID, CHIL_RELATIONDATE,
+                                       CHIL_CASE_UPL_STATE, CHIL_CASE_UPL_DESC, CHIL_CREATE_TYPE, CHIL_NAME_INITIAL,
+                                       CHIL_ADDRESS_DEPA_CODE, CHIL_HEIGHT, CHIL_PARTUS_TYPE, CHIL_KIND, CHIL_EDIT_SITE,
+                                       CHIL_EDIT_SITE_NAME, CHIL_CARD_TYPE, CHIL_CARD, CHIL_FATHERCARD_TYPE,
+                                       CHIL_MOTHERCARD_TYPE, CHIL_VERSION, CHIL_OTHER_GUARDIANTEL,
+                                       CHIL_OTHER_GUARDIAN_RELATION)
+        values (#{chilCode}, #{chilCardno}, #{chilCarddate}, #{chilName}, #{chilSex}, #{chilNo}, #{chilBirthno},
+                #{chilBirthday}, #{chilBirthweight}, #{chilFetus}, #{chilNatiId}, #{chilMother}, #{chilMothercorp},
+                #{chilMothertel}, #{chilMothermobile}, #{chilFather}, #{chilFathercorp}, #{chilFathertel},
+                #{chilFathermobile}, #{chilBirthhospital}, #{chilZoneId}, #{chilResidence}, #{chilAddress},
+                #{chilHabiId}, #{chilHabiaddress}, #{chilTel}, #{chilMobile}, #{chilEmail}, #{chilInfection},
+                #{chilSensitivity}, #{chilAefi}, #{chilMotherhb}, #{chilIstabu}, #{chilTabu}, #{chilKinddate},
+                #{chilKindId}, #{chilHere}, #{chilAccount}, #{chilLeavedate}, #{chilLeave}, #{chilCurdepartment},
+                #{chilPredepartment}, #{chilEditstate}, #{chilChangedate}, #{chilUploaddate}, #{chilInoculatestate},
+                #{chilCreatecounty}, #{chilCreatesite}, #{chilCreatedate}, #{chilCreateman}, #{chilElementary},
+                #{chilJunior}, #{chilRemark}, #{chilCustomcode}, #{chilNobacterin}, #{chilInocno}, #{chilInocdate},
+                #{chilInocstate}, #{chilMotherhiv}, #{chilChildhiv}, #{chilBookingprintdate}, #{chilHospitallevel},
+                #{chilServerliststate}, #{chilInocfeetime}, #{chilReinforceyears}, #{chilArrivedate},
+                #{chilInocuploaddate}, #{chilIsmessage}, #{chilEditman}, #{chilSelectbacterin}, #{chilMessageapprize},
+                #{chilRepeat}, #{chilElementaryschool}, #{chilJuniorhighschool}, #{chilUniversity}, #{chilSchoolclass},
+                #{chilUniversitydate}, #{chilMessagetime}, #{chilOccup}, #{chilUnitimmu}, #{chilHealthno},
+                #{chilEditDate}, #{chilCarddepaid}, #{chilCityno}, #{chilTicketdepaid}, #{chilTicketno},
+                #{chilTicketdate}, #{chilMotherno}, #{chilFatherno}, #{chilBcgScar}, #{chilResidenceclient},
+                #{chilAttributive}, #{chilHepbintime}, #{chilLeaveremark}, #{chilTranscontrol}, #{chilAddressdistrict},
+                #{chilMothercode}, #{chilFathercode}, #{chilFlpeId}, #{chilProvince}, #{chilBirthhospitalname},
+                #{chilFastref}, #{chilIdxUplState}, #{chilIdxUplErrDes}, #{chilContactaddress}, #{chilMotheraddress},
+                #{chilFatheraddress}, #{chilBinding}, #{chilMessagetype}, #{chilMessagefreeze}, #{chilVideCode},
+                #{chilGuardQq}, #{chilNewbornMark2}, #{chilAttributiveeditdate}, #{chilMovetype}, #{chilLastinocdate},
+                #{chilInoctype}, #{chilCreatetype}, #{chilFamily}, #{chilRelation}, #{chilRelationId},
+                #{chilRelationdate}, #{chilCaseUplState}, #{chilCaseUplDesc}, #{chilCreateType}, #{chilNameInitial},
+                #{chilAddressDepaCode}, #{chilHeight}, #{chilPartusType}, #{chilKind}, #{chilEditSite},
+                #{chilEditSiteName}, #{chilCardType}, #{chilCard}, #{chilFathercardType}, #{chilMothercardType},
+                #{chilVersion}, #{chilOtherGuardiantel}, #{chilOtherGuardianRelation})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="chilId" useGeneratedKeys="true">
+        insert into VACCSHENZHEN.CHILD(CHIL_CODE, CHIL_CARDNO, CHIL_CARDDATE, CHIL_NAME, CHIL_SEX, CHIL_NO,
+        CHIL_BIRTHNO, CHIL_BIRTHDAY, CHIL_BIRTHWEIGHT, CHIL_FETUS, CHIL_NATI_ID, CHIL_MOTHER, CHIL_MOTHERCORP,
+        CHIL_MOTHERTEL, CHIL_MOTHERMOBILE, CHIL_FATHER, CHIL_FATHERCORP, CHIL_FATHERTEL, CHIL_FATHERMOBILE,
+        CHIL_BIRTHHOSPITAL, CHIL_ZONE_ID, CHIL_RESIDENCE, CHIL_ADDRESS, CHIL_HABI_ID, CHIL_HABIADDRESS, CHIL_TEL,
+        CHIL_MOBILE, CHIL_EMAIL, CHIL_INFECTION, CHIL_SENSITIVITY, CHIL_AEFI, CHIL_MOTHERHB, CHIL_ISTABU, CHIL_TABU,
+        CHIL_KINDDATE, CHIL_KIND_ID, CHIL_HERE, CHIL_ACCOUNT, CHIL_LEAVEDATE, CHIL_LEAVE, CHIL_CURDEPARTMENT,
+        CHIL_PREDEPARTMENT, CHIL_EDITSTATE, CHIL_CHANGEDATE, CHIL_UPLOADDATE, CHIL_INOCULATESTATE, CHIL_CREATECOUNTY,
+        CHIL_CREATESITE, CHIL_CREATEDATE, CHIL_CREATEMAN, CHIL_ELEMENTARY, CHIL_JUNIOR, CHIL_REMARK, CHIL_CUSTOMCODE,
+        CHIL_NOBACTERIN, CHIL_INOCNO, CHIL_INOCDATE, CHIL_INOCSTATE, CHIL_MOTHERHIV, CHIL_CHILDHIV,
+        CHIL_BOOKINGPRINTDATE, CHIL_HOSPITALLEVEL, CHIL_SERVERLISTSTATE, CHIL_INOCFEETIME, CHIL_REINFORCEYEARS,
+        CHIL_ARRIVEDATE, CHIL_INOCUPLOADDATE, CHIL_ISMESSAGE, CHIL_EDITMAN, CHIL_SELECTBACTERIN, CHIL_MESSAGEAPPRIZE,
+        CHIL_REPEAT, CHIL_ELEMENTARYSCHOOL, CHIL_JUNIORHIGHSCHOOL, CHIL_UNIVERSITY, CHIL_SCHOOLCLASS,
+        CHIL_UNIVERSITYDATE, CHIL_MESSAGETIME, CHIL_OCCUP, CHIL_UNITIMMU, CHIL_HEALTHNO, CHIL_EDIT_DATE,
+        CHIL_CARDDEPAID, CHIL_CITYNO, CHIL_TICKETDEPAID, CHIL_TICKETNO, CHIL_TICKETDATE, CHIL_MOTHERNO, CHIL_FATHERNO,
+        CHIL_BCG_SCAR, CHIL_RESIDENCECLIENT, CHIL_ATTRIBUTIVE, CHIL_HEPBINTIME, CHIL_LEAVEREMARK, CHIL_TRANSCONTROL,
+        CHIL_ADDRESSDISTRICT, CHIL_MOTHERCODE, CHIL_FATHERCODE, CHIL_FLPE_ID, CHIL_PROVINCE, CHIL_BIRTHHOSPITALNAME,
+        CHIL_FASTREF, CHIL_IDX_UPL_STATE, CHIL_IDX_UPL_ERR_DES, CHIL_CONTACTADDRESS, CHIL_MOTHERADDRESS,
+        CHIL_FATHERADDRESS, CHIL_BINDING, CHIL_MESSAGETYPE, CHIL_MESSAGEFREEZE, CHIL_VIDE_CODE, CHIL_GUARD_QQ,
+        CHIL_NEWBORN_MARK2, CHIL_ATTRIBUTIVEEDITDATE, CHIL_MOVETYPE, CHIL_LASTINOCDATE, CHIL_INOCTYPE, CHIL_CREATETYPE,
+        CHIL_FAMILY, CHIL_RELATION, CHIL_RELATION_ID, CHIL_RELATIONDATE, CHIL_CASE_UPL_STATE, CHIL_CASE_UPL_DESC,
+        CHIL_CREATE_TYPE, CHIL_NAME_INITIAL, CHIL_ADDRESS_DEPA_CODE, CHIL_HEIGHT, CHIL_PARTUS_TYPE, CHIL_KIND,
+        CHIL_EDIT_SITE, CHIL_EDIT_SITE_NAME, CHIL_CARD_TYPE, CHIL_CARD, CHIL_FATHERCARD_TYPE, CHIL_MOTHERCARD_TYPE,
+        CHIL_VERSION, CHIL_OTHER_GUARDIANTEL, CHIL_OTHER_GUARDIAN_RELATION)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.chilCode}, #{entity.chilCardno}, #{entity.chilCarddate}, #{entity.chilName}, #{entity.chilSex},
+            #{entity.chilNo}, #{entity.chilBirthno}, #{entity.chilBirthday}, #{entity.chilBirthweight},
+            #{entity.chilFetus}, #{entity.chilNatiId}, #{entity.chilMother}, #{entity.chilMothercorp},
+            #{entity.chilMothertel}, #{entity.chilMothermobile}, #{entity.chilFather}, #{entity.chilFathercorp},
+            #{entity.chilFathertel}, #{entity.chilFathermobile}, #{entity.chilBirthhospital}, #{entity.chilZoneId},
+            #{entity.chilResidence}, #{entity.chilAddress}, #{entity.chilHabiId}, #{entity.chilHabiaddress},
+            #{entity.chilTel}, #{entity.chilMobile}, #{entity.chilEmail}, #{entity.chilInfection},
+            #{entity.chilSensitivity}, #{entity.chilAefi}, #{entity.chilMotherhb}, #{entity.chilIstabu},
+            #{entity.chilTabu}, #{entity.chilKinddate}, #{entity.chilKindId}, #{entity.chilHere}, #{entity.chilAccount},
+            #{entity.chilLeavedate}, #{entity.chilLeave}, #{entity.chilCurdepartment}, #{entity.chilPredepartment},
+            #{entity.chilEditstate}, #{entity.chilChangedate}, #{entity.chilUploaddate}, #{entity.chilInoculatestate},
+            #{entity.chilCreatecounty}, #{entity.chilCreatesite}, #{entity.chilCreatedate}, #{entity.chilCreateman},
+            #{entity.chilElementary}, #{entity.chilJunior}, #{entity.chilRemark}, #{entity.chilCustomcode},
+            #{entity.chilNobacterin}, #{entity.chilInocno}, #{entity.chilInocdate}, #{entity.chilInocstate},
+            #{entity.chilMotherhiv}, #{entity.chilChildhiv}, #{entity.chilBookingprintdate},
+            #{entity.chilHospitallevel}, #{entity.chilServerliststate}, #{entity.chilInocfeetime},
+            #{entity.chilReinforceyears}, #{entity.chilArrivedate}, #{entity.chilInocuploaddate},
+            #{entity.chilIsmessage}, #{entity.chilEditman}, #{entity.chilSelectbacterin}, #{entity.chilMessageapprize},
+            #{entity.chilRepeat}, #{entity.chilElementaryschool}, #{entity.chilJuniorhighschool},
+            #{entity.chilUniversity}, #{entity.chilSchoolclass}, #{entity.chilUniversitydate},
+            #{entity.chilMessagetime}, #{entity.chilOccup}, #{entity.chilUnitimmu}, #{entity.chilHealthno},
+            #{entity.chilEditDate}, #{entity.chilCarddepaid}, #{entity.chilCityno}, #{entity.chilTicketdepaid},
+            #{entity.chilTicketno}, #{entity.chilTicketdate}, #{entity.chilMotherno}, #{entity.chilFatherno},
+            #{entity.chilBcgScar}, #{entity.chilResidenceclient}, #{entity.chilAttributive}, #{entity.chilHepbintime},
+            #{entity.chilLeaveremark}, #{entity.chilTranscontrol}, #{entity.chilAddressdistrict},
+            #{entity.chilMothercode}, #{entity.chilFathercode}, #{entity.chilFlpeId}, #{entity.chilProvince},
+            #{entity.chilBirthhospitalname}, #{entity.chilFastref}, #{entity.chilIdxUplState},
+            #{entity.chilIdxUplErrDes}, #{entity.chilContactaddress}, #{entity.chilMotheraddress},
+            #{entity.chilFatheraddress}, #{entity.chilBinding}, #{entity.chilMessagetype}, #{entity.chilMessagefreeze},
+            #{entity.chilVideCode}, #{entity.chilGuardQq}, #{entity.chilNewbornMark2},
+            #{entity.chilAttributiveeditdate}, #{entity.chilMovetype}, #{entity.chilLastinocdate},
+            #{entity.chilInoctype}, #{entity.chilCreatetype}, #{entity.chilFamily}, #{entity.chilRelation},
+            #{entity.chilRelationId}, #{entity.chilRelationdate}, #{entity.chilCaseUplState}, #{entity.chilCaseUplDesc},
+            #{entity.chilCreateType}, #{entity.chilNameInitial}, #{entity.chilAddressDepaCode}, #{entity.chilHeight},
+            #{entity.chilPartusType}, #{entity.chilKind}, #{entity.chilEditSite}, #{entity.chilEditSiteName},
+            #{entity.chilCardType}, #{entity.chilCard}, #{entity.chilFathercardType}, #{entity.chilMothercardType},
+            #{entity.chilVersion}, #{entity.chilOtherGuardiantel}, #{entity.chilOtherGuardianRelation})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="chilId" useGeneratedKeys="true">
+        insert into VACCSHENZHEN.CHILD(CHIL_CODE, CHIL_CARDNO, CHIL_CARDDATE, CHIL_NAME, CHIL_SEX, CHIL_NO,
+        CHIL_BIRTHNO, CHIL_BIRTHDAY, CHIL_BIRTHWEIGHT, CHIL_FETUS, CHIL_NATI_ID, CHIL_MOTHER, CHIL_MOTHERCORP,
+        CHIL_MOTHERTEL, CHIL_MOTHERMOBILE, CHIL_FATHER, CHIL_FATHERCORP, CHIL_FATHERTEL, CHIL_FATHERMOBILE,
+        CHIL_BIRTHHOSPITAL, CHIL_ZONE_ID, CHIL_RESIDENCE, CHIL_ADDRESS, CHIL_HABI_ID, CHIL_HABIADDRESS, CHIL_TEL,
+        CHIL_MOBILE, CHIL_EMAIL, CHIL_INFECTION, CHIL_SENSITIVITY, CHIL_AEFI, CHIL_MOTHERHB, CHIL_ISTABU, CHIL_TABU,
+        CHIL_KINDDATE, CHIL_KIND_ID, CHIL_HERE, CHIL_ACCOUNT, CHIL_LEAVEDATE, CHIL_LEAVE, CHIL_CURDEPARTMENT,
+        CHIL_PREDEPARTMENT, CHIL_EDITSTATE, CHIL_CHANGEDATE, CHIL_UPLOADDATE, CHIL_INOCULATESTATE, CHIL_CREATECOUNTY,
+        CHIL_CREATESITE, CHIL_CREATEDATE, CHIL_CREATEMAN, CHIL_ELEMENTARY, CHIL_JUNIOR, CHIL_REMARK, CHIL_CUSTOMCODE,
+        CHIL_NOBACTERIN, CHIL_INOCNO, CHIL_INOCDATE, CHIL_INOCSTATE, CHIL_MOTHERHIV, CHIL_CHILDHIV,
+        CHIL_BOOKINGPRINTDATE, CHIL_HOSPITALLEVEL, CHIL_SERVERLISTSTATE, CHIL_INOCFEETIME, CHIL_REINFORCEYEARS,
+        CHIL_ARRIVEDATE, CHIL_INOCUPLOADDATE, CHIL_ISMESSAGE, CHIL_EDITMAN, CHIL_SELECTBACTERIN, CHIL_MESSAGEAPPRIZE,
+        CHIL_REPEAT, CHIL_ELEMENTARYSCHOOL, CHIL_JUNIORHIGHSCHOOL, CHIL_UNIVERSITY, CHIL_SCHOOLCLASS,
+        CHIL_UNIVERSITYDATE, CHIL_MESSAGETIME, CHIL_OCCUP, CHIL_UNITIMMU, CHIL_HEALTHNO, CHIL_EDIT_DATE,
+        CHIL_CARDDEPAID, CHIL_CITYNO, CHIL_TICKETDEPAID, CHIL_TICKETNO, CHIL_TICKETDATE, CHIL_MOTHERNO, CHIL_FATHERNO,
+        CHIL_BCG_SCAR, CHIL_RESIDENCECLIENT, CHIL_ATTRIBUTIVE, CHIL_HEPBINTIME, CHIL_LEAVEREMARK, CHIL_TRANSCONTROL,
+        CHIL_ADDRESSDISTRICT, CHIL_MOTHERCODE, CHIL_FATHERCODE, CHIL_FLPE_ID, CHIL_PROVINCE, CHIL_BIRTHHOSPITALNAME,
+        CHIL_FASTREF, CHIL_IDX_UPL_STATE, CHIL_IDX_UPL_ERR_DES, CHIL_CONTACTADDRESS, CHIL_MOTHERADDRESS,
+        CHIL_FATHERADDRESS, CHIL_BINDING, CHIL_MESSAGETYPE, CHIL_MESSAGEFREEZE, CHIL_VIDE_CODE, CHIL_GUARD_QQ,
+        CHIL_NEWBORN_MARK2, CHIL_ATTRIBUTIVEEDITDATE, CHIL_MOVETYPE, CHIL_LASTINOCDATE, CHIL_INOCTYPE, CHIL_CREATETYPE,
+        CHIL_FAMILY, CHIL_RELATION, CHIL_RELATION_ID, CHIL_RELATIONDATE, CHIL_CASE_UPL_STATE, CHIL_CASE_UPL_DESC,
+        CHIL_CREATE_TYPE, CHIL_NAME_INITIAL, CHIL_ADDRESS_DEPA_CODE, CHIL_HEIGHT, CHIL_PARTUS_TYPE, CHIL_KIND,
+        CHIL_EDIT_SITE, CHIL_EDIT_SITE_NAME, CHIL_CARD_TYPE, CHIL_CARD, CHIL_FATHERCARD_TYPE, CHIL_MOTHERCARD_TYPE,
+        CHIL_VERSION, CHIL_OTHER_GUARDIANTEL, CHIL_OTHER_GUARDIAN_RELATION)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.chilCode}, #{entity.chilCardno}, #{entity.chilCarddate}, #{entity.chilName}, #{entity.chilSex},
+            #{entity.chilNo}, #{entity.chilBirthno}, #{entity.chilBirthday}, #{entity.chilBirthweight},
+            #{entity.chilFetus}, #{entity.chilNatiId}, #{entity.chilMother}, #{entity.chilMothercorp},
+            #{entity.chilMothertel}, #{entity.chilMothermobile}, #{entity.chilFather}, #{entity.chilFathercorp},
+            #{entity.chilFathertel}, #{entity.chilFathermobile}, #{entity.chilBirthhospital}, #{entity.chilZoneId},
+            #{entity.chilResidence}, #{entity.chilAddress}, #{entity.chilHabiId}, #{entity.chilHabiaddress},
+            #{entity.chilTel}, #{entity.chilMobile}, #{entity.chilEmail}, #{entity.chilInfection},
+            #{entity.chilSensitivity}, #{entity.chilAefi}, #{entity.chilMotherhb}, #{entity.chilIstabu},
+            #{entity.chilTabu}, #{entity.chilKinddate}, #{entity.chilKindId}, #{entity.chilHere}, #{entity.chilAccount},
+            #{entity.chilLeavedate}, #{entity.chilLeave}, #{entity.chilCurdepartment}, #{entity.chilPredepartment},
+            #{entity.chilEditstate}, #{entity.chilChangedate}, #{entity.chilUploaddate}, #{entity.chilInoculatestate},
+            #{entity.chilCreatecounty}, #{entity.chilCreatesite}, #{entity.chilCreatedate}, #{entity.chilCreateman},
+            #{entity.chilElementary}, #{entity.chilJunior}, #{entity.chilRemark}, #{entity.chilCustomcode},
+            #{entity.chilNobacterin}, #{entity.chilInocno}, #{entity.chilInocdate}, #{entity.chilInocstate},
+            #{entity.chilMotherhiv}, #{entity.chilChildhiv}, #{entity.chilBookingprintdate},
+            #{entity.chilHospitallevel}, #{entity.chilServerliststate}, #{entity.chilInocfeetime},
+            #{entity.chilReinforceyears}, #{entity.chilArrivedate}, #{entity.chilInocuploaddate},
+            #{entity.chilIsmessage}, #{entity.chilEditman}, #{entity.chilSelectbacterin}, #{entity.chilMessageapprize},
+            #{entity.chilRepeat}, #{entity.chilElementaryschool}, #{entity.chilJuniorhighschool},
+            #{entity.chilUniversity}, #{entity.chilSchoolclass}, #{entity.chilUniversitydate},
+            #{entity.chilMessagetime}, #{entity.chilOccup}, #{entity.chilUnitimmu}, #{entity.chilHealthno},
+            #{entity.chilEditDate}, #{entity.chilCarddepaid}, #{entity.chilCityno}, #{entity.chilTicketdepaid},
+            #{entity.chilTicketno}, #{entity.chilTicketdate}, #{entity.chilMotherno}, #{entity.chilFatherno},
+            #{entity.chilBcgScar}, #{entity.chilResidenceclient}, #{entity.chilAttributive}, #{entity.chilHepbintime},
+            #{entity.chilLeaveremark}, #{entity.chilTranscontrol}, #{entity.chilAddressdistrict},
+            #{entity.chilMothercode}, #{entity.chilFathercode}, #{entity.chilFlpeId}, #{entity.chilProvince},
+            #{entity.chilBirthhospitalname}, #{entity.chilFastref}, #{entity.chilIdxUplState},
+            #{entity.chilIdxUplErrDes}, #{entity.chilContactaddress}, #{entity.chilMotheraddress},
+            #{entity.chilFatheraddress}, #{entity.chilBinding}, #{entity.chilMessagetype}, #{entity.chilMessagefreeze},
+            #{entity.chilVideCode}, #{entity.chilGuardQq}, #{entity.chilNewbornMark2},
+            #{entity.chilAttributiveeditdate}, #{entity.chilMovetype}, #{entity.chilLastinocdate},
+            #{entity.chilInoctype}, #{entity.chilCreatetype}, #{entity.chilFamily}, #{entity.chilRelation},
+            #{entity.chilRelationId}, #{entity.chilRelationdate}, #{entity.chilCaseUplState}, #{entity.chilCaseUplDesc},
+            #{entity.chilCreateType}, #{entity.chilNameInitial}, #{entity.chilAddressDepaCode}, #{entity.chilHeight},
+            #{entity.chilPartusType}, #{entity.chilKind}, #{entity.chilEditSite}, #{entity.chilEditSiteName},
+            #{entity.chilCardType}, #{entity.chilCard}, #{entity.chilFathercardType}, #{entity.chilMothercardType},
+            #{entity.chilVersion}, #{entity.chilOtherGuardiantel}, #{entity.chilOtherGuardianRelation})
+        </foreach>
+        on duplicate key update
+        CHIL_CODE = values(CHIL_CODE) , CHIL_CARDNO = values(CHIL_CARDNO) , CHIL_CARDDATE = values(CHIL_CARDDATE) ,
+        CHIL_NAME = values(CHIL_NAME) , CHIL_SEX = values(CHIL_SEX) , CHIL_NO = values(CHIL_NO) , CHIL_BIRTHNO =
+        values(CHIL_BIRTHNO) , CHIL_BIRTHDAY = values(CHIL_BIRTHDAY) , CHIL_BIRTHWEIGHT = values(CHIL_BIRTHWEIGHT) ,
+        CHIL_FETUS = values(CHIL_FETUS) , CHIL_NATI_ID = values(CHIL_NATI_ID) , CHIL_MOTHER = values(CHIL_MOTHER) ,
+        CHIL_MOTHERCORP = values(CHIL_MOTHERCORP) , CHIL_MOTHERTEL = values(CHIL_MOTHERTEL) , CHIL_MOTHERMOBILE =
+        values(CHIL_MOTHERMOBILE) , CHIL_FATHER = values(CHIL_FATHER) , CHIL_FATHERCORP = values(CHIL_FATHERCORP) ,
+        CHIL_FATHERTEL = values(CHIL_FATHERTEL) , CHIL_FATHERMOBILE = values(CHIL_FATHERMOBILE) , CHIL_BIRTHHOSPITAL =
+        values(CHIL_BIRTHHOSPITAL) , CHIL_ZONE_ID = values(CHIL_ZONE_ID) , CHIL_RESIDENCE = values(CHIL_RESIDENCE) ,
+        CHIL_ADDRESS = values(CHIL_ADDRESS) , CHIL_HABI_ID = values(CHIL_HABI_ID) , CHIL_HABIADDRESS =
+        values(CHIL_HABIADDRESS) , CHIL_TEL = values(CHIL_TEL) , CHIL_MOBILE = values(CHIL_MOBILE) , CHIL_EMAIL =
+        values(CHIL_EMAIL) , CHIL_INFECTION = values(CHIL_INFECTION) , CHIL_SENSITIVITY = values(CHIL_SENSITIVITY) ,
+        CHIL_AEFI = values(CHIL_AEFI) , CHIL_MOTHERHB = values(CHIL_MOTHERHB) , CHIL_ISTABU = values(CHIL_ISTABU) ,
+        CHIL_TABU = values(CHIL_TABU) , CHIL_KINDDATE = values(CHIL_KINDDATE) , CHIL_KIND_ID = values(CHIL_KIND_ID) ,
+        CHIL_HERE = values(CHIL_HERE) , CHIL_ACCOUNT = values(CHIL_ACCOUNT) , CHIL_LEAVEDATE = values(CHIL_LEAVEDATE) ,
+        CHIL_LEAVE = values(CHIL_LEAVE) , CHIL_CURDEPARTMENT = values(CHIL_CURDEPARTMENT) , CHIL_PREDEPARTMENT =
+        values(CHIL_PREDEPARTMENT) , CHIL_EDITSTATE = values(CHIL_EDITSTATE) , CHIL_CHANGEDATE = values(CHIL_CHANGEDATE)
+        , CHIL_UPLOADDATE = values(CHIL_UPLOADDATE) , CHIL_INOCULATESTATE = values(CHIL_INOCULATESTATE) ,
+        CHIL_CREATECOUNTY = values(CHIL_CREATECOUNTY) , CHIL_CREATESITE = values(CHIL_CREATESITE) , CHIL_CREATEDATE =
+        values(CHIL_CREATEDATE) , CHIL_CREATEMAN = values(CHIL_CREATEMAN) , CHIL_ELEMENTARY = values(CHIL_ELEMENTARY) ,
+        CHIL_JUNIOR = values(CHIL_JUNIOR) , CHIL_REMARK = values(CHIL_REMARK) , CHIL_CUSTOMCODE =
+        values(CHIL_CUSTOMCODE) , CHIL_NOBACTERIN = values(CHIL_NOBACTERIN) , CHIL_INOCNO = values(CHIL_INOCNO) ,
+        CHIL_INOCDATE = values(CHIL_INOCDATE) , CHIL_INOCSTATE = values(CHIL_INOCSTATE) , CHIL_MOTHERHIV =
+        values(CHIL_MOTHERHIV) , CHIL_CHILDHIV = values(CHIL_CHILDHIV) , CHIL_BOOKINGPRINTDATE =
+        values(CHIL_BOOKINGPRINTDATE) , CHIL_HOSPITALLEVEL = values(CHIL_HOSPITALLEVEL) , CHIL_SERVERLISTSTATE =
+        values(CHIL_SERVERLISTSTATE) , CHIL_INOCFEETIME = values(CHIL_INOCFEETIME) , CHIL_REINFORCEYEARS =
+        values(CHIL_REINFORCEYEARS) , CHIL_ARRIVEDATE = values(CHIL_ARRIVEDATE) , CHIL_INOCUPLOADDATE =
+        values(CHIL_INOCUPLOADDATE) , CHIL_ISMESSAGE = values(CHIL_ISMESSAGE) , CHIL_EDITMAN = values(CHIL_EDITMAN) ,
+        CHIL_SELECTBACTERIN = values(CHIL_SELECTBACTERIN) , CHIL_MESSAGEAPPRIZE = values(CHIL_MESSAGEAPPRIZE) ,
+        CHIL_REPEAT = values(CHIL_REPEAT) , CHIL_ELEMENTARYSCHOOL = values(CHIL_ELEMENTARYSCHOOL) ,
+        CHIL_JUNIORHIGHSCHOOL = values(CHIL_JUNIORHIGHSCHOOL) , CHIL_UNIVERSITY = values(CHIL_UNIVERSITY) ,
+        CHIL_SCHOOLCLASS = values(CHIL_SCHOOLCLASS) , CHIL_UNIVERSITYDATE = values(CHIL_UNIVERSITYDATE) ,
+        CHIL_MESSAGETIME = values(CHIL_MESSAGETIME) , CHIL_OCCUP = values(CHIL_OCCUP) , CHIL_UNITIMMU =
+        values(CHIL_UNITIMMU) , CHIL_HEALTHNO = values(CHIL_HEALTHNO) , CHIL_EDIT_DATE = values(CHIL_EDIT_DATE) ,
+        CHIL_CARDDEPAID = values(CHIL_CARDDEPAID) , CHIL_CITYNO = values(CHIL_CITYNO) , CHIL_TICKETDEPAID =
+        values(CHIL_TICKETDEPAID) , CHIL_TICKETNO = values(CHIL_TICKETNO) , CHIL_TICKETDATE = values(CHIL_TICKETDATE) ,
+        CHIL_MOTHERNO = values(CHIL_MOTHERNO) , CHIL_FATHERNO = values(CHIL_FATHERNO) , CHIL_BCG_SCAR =
+        values(CHIL_BCG_SCAR) , CHIL_RESIDENCECLIENT = values(CHIL_RESIDENCECLIENT) , CHIL_ATTRIBUTIVE =
+        values(CHIL_ATTRIBUTIVE) , CHIL_HEPBINTIME = values(CHIL_HEPBINTIME) , CHIL_LEAVEREMARK =
+        values(CHIL_LEAVEREMARK) , CHIL_TRANSCONTROL = values(CHIL_TRANSCONTROL) , CHIL_ADDRESSDISTRICT =
+        values(CHIL_ADDRESSDISTRICT) , CHIL_MOTHERCODE = values(CHIL_MOTHERCODE) , CHIL_FATHERCODE =
+        values(CHIL_FATHERCODE) , CHIL_FLPE_ID = values(CHIL_FLPE_ID) , CHIL_PROVINCE = values(CHIL_PROVINCE) ,
+        CHIL_BIRTHHOSPITALNAME = values(CHIL_BIRTHHOSPITALNAME) , CHIL_FASTREF = values(CHIL_FASTREF) ,
+        CHIL_IDX_UPL_STATE = values(CHIL_IDX_UPL_STATE) , CHIL_IDX_UPL_ERR_DES = values(CHIL_IDX_UPL_ERR_DES) ,
+        CHIL_CONTACTADDRESS = values(CHIL_CONTACTADDRESS) , CHIL_MOTHERADDRESS = values(CHIL_MOTHERADDRESS) ,
+        CHIL_FATHERADDRESS = values(CHIL_FATHERADDRESS) , CHIL_BINDING = values(CHIL_BINDING) , CHIL_MESSAGETYPE =
+        values(CHIL_MESSAGETYPE) , CHIL_MESSAGEFREEZE = values(CHIL_MESSAGEFREEZE) , CHIL_VIDE_CODE =
+        values(CHIL_VIDE_CODE) , CHIL_GUARD_QQ = values(CHIL_GUARD_QQ) , CHIL_NEWBORN_MARK2 = values(CHIL_NEWBORN_MARK2)
+        , CHIL_ATTRIBUTIVEEDITDATE = values(CHIL_ATTRIBUTIVEEDITDATE) , CHIL_MOVETYPE = values(CHIL_MOVETYPE) ,
+        CHIL_LASTINOCDATE = values(CHIL_LASTINOCDATE) , CHIL_INOCTYPE = values(CHIL_INOCTYPE) , CHIL_CREATETYPE =
+        values(CHIL_CREATETYPE) , CHIL_FAMILY = values(CHIL_FAMILY) , CHIL_RELATION = values(CHIL_RELATION) ,
+        CHIL_RELATION_ID = values(CHIL_RELATION_ID) , CHIL_RELATIONDATE = values(CHIL_RELATIONDATE) ,
+        CHIL_CASE_UPL_STATE = values(CHIL_CASE_UPL_STATE) , CHIL_CASE_UPL_DESC = values(CHIL_CASE_UPL_DESC) ,
+        CHIL_CREATE_TYPE = values(CHIL_CREATE_TYPE) , CHIL_NAME_INITIAL = values(CHIL_NAME_INITIAL) ,
+        CHIL_ADDRESS_DEPA_CODE = values(CHIL_ADDRESS_DEPA_CODE) , CHIL_HEIGHT = values(CHIL_HEIGHT) , CHIL_PARTUS_TYPE =
+        values(CHIL_PARTUS_TYPE) , CHIL_KIND = values(CHIL_KIND) , CHIL_EDIT_SITE = values(CHIL_EDIT_SITE) ,
+        CHIL_EDIT_SITE_NAME = values(CHIL_EDIT_SITE_NAME) , CHIL_CARD_TYPE = values(CHIL_CARD_TYPE) , CHIL_CARD =
+        values(CHIL_CARD) , CHIL_FATHERCARD_TYPE = values(CHIL_FATHERCARD_TYPE) , CHIL_MOTHERCARD_TYPE =
+        values(CHIL_MOTHERCARD_TYPE) , CHIL_VERSION = values(CHIL_VERSION) , CHIL_OTHER_GUARDIANTEL =
+        values(CHIL_OTHER_GUARDIANTEL) , CHIL_OTHER_GUARDIAN_RELATION = values(CHIL_OTHER_GUARDIAN_RELATION)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update VACCSHENZHEN.CHILD
+        <set>
+            <if test="chilCode != null and chilCode != ''">
+                CHIL_CODE = #{chilCode},
+            </if>
+            <if test="chilCardno != null and chilCardno != ''">
+                CHIL_CARDNO = #{chilCardno},
+            </if>
+            <if test="chilCarddate != null">
+                CHIL_CARDDATE = #{chilCarddate},
+            </if>
+            <if test="chilName != null and chilName != ''">
+                CHIL_NAME = #{chilName},
+            </if>
+            <if test="chilSex != null and chilSex != ''">
+                CHIL_SEX = #{chilSex},
+            </if>
+            <if test="chilNo != null and chilNo != ''">
+                CHIL_NO = #{chilNo},
+            </if>
+            <if test="chilBirthno != null and chilBirthno != ''">
+                CHIL_BIRTHNO = #{chilBirthno},
+            </if>
+            <if test="chilBirthday != null">
+                CHIL_BIRTHDAY = #{chilBirthday},
+            </if>
+            <if test="chilBirthweight != null and chilBirthweight != ''">
+                CHIL_BIRTHWEIGHT = #{chilBirthweight},
+            </if>
+            <if test="chilFetus != null and chilFetus != ''">
+                CHIL_FETUS = #{chilFetus},
+            </if>
+            <if test="chilNatiId != null">
+                CHIL_NATI_ID = #{chilNatiId},
+            </if>
+            <if test="chilMother != null and chilMother != ''">
+                CHIL_MOTHER = #{chilMother},
+            </if>
+            <if test="chilMothercorp != null and chilMothercorp != ''">
+                CHIL_MOTHERCORP = #{chilMothercorp},
+            </if>
+            <if test="chilMothertel != null and chilMothertel != ''">
+                CHIL_MOTHERTEL = #{chilMothertel},
+            </if>
+            <if test="chilMothermobile != null and chilMothermobile != ''">
+                CHIL_MOTHERMOBILE = #{chilMothermobile},
+            </if>
+            <if test="chilFather != null and chilFather != ''">
+                CHIL_FATHER = #{chilFather},
+            </if>
+            <if test="chilFathercorp != null and chilFathercorp != ''">
+                CHIL_FATHERCORP = #{chilFathercorp},
+            </if>
+            <if test="chilFathertel != null and chilFathertel != ''">
+                CHIL_FATHERTEL = #{chilFathertel},
+            </if>
+            <if test="chilFathermobile != null and chilFathermobile != ''">
+                CHIL_FATHERMOBILE = #{chilFathermobile},
+            </if>
+            <if test="chilBirthhospital != null and chilBirthhospital != ''">
+                CHIL_BIRTHHOSPITAL = #{chilBirthhospital},
+            </if>
+            <if test="chilZoneId != null and chilZoneId != ''">
+                CHIL_ZONE_ID = #{chilZoneId},
+            </if>
+            <if test="chilResidence != null">
+                CHIL_RESIDENCE = #{chilResidence},
+            </if>
+            <if test="chilAddress != null and chilAddress != ''">
+                CHIL_ADDRESS = #{chilAddress},
+            </if>
+            <if test="chilHabiId != null">
+                CHIL_HABI_ID = #{chilHabiId},
+            </if>
+            <if test="chilHabiaddress != null and chilHabiaddress != ''">
+                CHIL_HABIADDRESS = #{chilHabiaddress},
+            </if>
+            <if test="chilTel != null and chilTel != ''">
+                CHIL_TEL = #{chilTel},
+            </if>
+            <if test="chilMobile != null and chilMobile != ''">
+                CHIL_MOBILE = #{chilMobile},
+            </if>
+            <if test="chilEmail != null and chilEmail != ''">
+                CHIL_EMAIL = #{chilEmail},
+            </if>
+            <if test="chilInfection != null and chilInfection != ''">
+                CHIL_INFECTION = #{chilInfection},
+            </if>
+            <if test="chilSensitivity != null and chilSensitivity != ''">
+                CHIL_SENSITIVITY = #{chilSensitivity},
+            </if>
+            <if test="chilAefi != null and chilAefi != ''">
+                CHIL_AEFI = #{chilAefi},
+            </if>
+            <if test="chilMotherhb != null and chilMotherhb != ''">
+                CHIL_MOTHERHB = #{chilMotherhb},
+            </if>
+            <if test="chilIstabu != null and chilIstabu != ''">
+                CHIL_ISTABU = #{chilIstabu},
+            </if>
+            <if test="chilTabu != null and chilTabu != ''">
+                CHIL_TABU = #{chilTabu},
+            </if>
+            <if test="chilKinddate != null">
+                CHIL_KINDDATE = #{chilKinddate},
+            </if>
+            <if test="chilKindId != null">
+                CHIL_KIND_ID = #{chilKindId},
+            </if>
+            <if test="chilHere != null and chilHere != ''">
+                CHIL_HERE = #{chilHere},
+            </if>
+            <if test="chilAccount != null and chilAccount != ''">
+                CHIL_ACCOUNT = #{chilAccount},
+            </if>
+            <if test="chilLeavedate != null">
+                CHIL_LEAVEDATE = #{chilLeavedate},
+            </if>
+            <if test="chilLeave != null and chilLeave != ''">
+                CHIL_LEAVE = #{chilLeave},
+            </if>
+            <if test="chilCurdepartment != null and chilCurdepartment != ''">
+                CHIL_CURDEPARTMENT = #{chilCurdepartment},
+            </if>
+            <if test="chilPredepartment != null and chilPredepartment != ''">
+                CHIL_PREDEPARTMENT = #{chilPredepartment},
+            </if>
+            <if test="chilEditstate != null and chilEditstate != ''">
+                CHIL_EDITSTATE = #{chilEditstate},
+            </if>
+            <if test="chilChangedate != null">
+                CHIL_CHANGEDATE = #{chilChangedate},
+            </if>
+            <if test="chilUploaddate != null">
+                CHIL_UPLOADDATE = #{chilUploaddate},
+            </if>
+            <if test="chilInoculatestate != null and chilInoculatestate != ''">
+                CHIL_INOCULATESTATE = #{chilInoculatestate},
+            </if>
+            <if test="chilCreatecounty != null">
+                CHIL_CREATECOUNTY = #{chilCreatecounty},
+            </if>
+            <if test="chilCreatesite != null and chilCreatesite != ''">
+                CHIL_CREATESITE = #{chilCreatesite},
+            </if>
+            <if test="chilCreatedate != null">
+                CHIL_CREATEDATE = #{chilCreatedate},
+            </if>
+            <if test="chilCreateman != null and chilCreateman != ''">
+                CHIL_CREATEMAN = #{chilCreateman},
+            </if>
+            <if test="chilElementary != null">
+                CHIL_ELEMENTARY = #{chilElementary},
+            </if>
+            <if test="chilJunior != null">
+                CHIL_JUNIOR = #{chilJunior},
+            </if>
+            <if test="chilRemark != null and chilRemark != ''">
+                CHIL_REMARK = #{chilRemark},
+            </if>
+            <if test="chilCustomcode != null and chilCustomcode != ''">
+                CHIL_CUSTOMCODE = #{chilCustomcode},
+            </if>
+            <if test="chilNobacterin != null and chilNobacterin != ''">
+                CHIL_NOBACTERIN = #{chilNobacterin},
+            </if>
+            <if test="chilInocno != null">
+                CHIL_INOCNO = #{chilInocno},
+            </if>
+            <if test="chilInocdate != null">
+                CHIL_INOCDATE = #{chilInocdate},
+            </if>
+            <if test="chilInocstate != null and chilInocstate != ''">
+                CHIL_INOCSTATE = #{chilInocstate},
+            </if>
+            <if test="chilMotherhiv != null and chilMotherhiv != ''">
+                CHIL_MOTHERHIV = #{chilMotherhiv},
+            </if>
+            <if test="chilChildhiv != null and chilChildhiv != ''">
+                CHIL_CHILDHIV = #{chilChildhiv},
+            </if>
+            <if test="chilBookingprintdate != null">
+                CHIL_BOOKINGPRINTDATE = #{chilBookingprintdate},
+            </if>
+            <if test="chilHospitallevel != null and chilHospitallevel != ''">
+                CHIL_HOSPITALLEVEL = #{chilHospitallevel},
+            </if>
+            <if test="chilServerliststate != null and chilServerliststate != ''">
+                CHIL_SERVERLISTSTATE = #{chilServerliststate},
+            </if>
+            <if test="chilInocfeetime != null">
+                CHIL_INOCFEETIME = #{chilInocfeetime},
+            </if>
+            <if test="chilReinforceyears != null and chilReinforceyears != ''">
+                CHIL_REINFORCEYEARS = #{chilReinforceyears},
+            </if>
+            <if test="chilArrivedate != null">
+                CHIL_ARRIVEDATE = #{chilArrivedate},
+            </if>
+            <if test="chilInocuploaddate != null">
+                CHIL_INOCUPLOADDATE = #{chilInocuploaddate},
+            </if>
+            <if test="chilIsmessage != null and chilIsmessage != ''">
+                CHIL_ISMESSAGE = #{chilIsmessage},
+            </if>
+            <if test="chilEditman != null and chilEditman != ''">
+                CHIL_EDITMAN = #{chilEditman},
+            </if>
+            <if test="chilSelectbacterin != null and chilSelectbacterin != ''">
+                CHIL_SELECTBACTERIN = #{chilSelectbacterin},
+            </if>
+            <if test="chilMessageapprize != null and chilMessageapprize != ''">
+                CHIL_MESSAGEAPPRIZE = #{chilMessageapprize},
+            </if>
+            <if test="chilRepeat != null and chilRepeat != ''">
+                CHIL_REPEAT = #{chilRepeat},
+            </if>
+            <if test="chilElementaryschool != null">
+                CHIL_ELEMENTARYSCHOOL = #{chilElementaryschool},
+            </if>
+            <if test="chilJuniorhighschool != null">
+                CHIL_JUNIORHIGHSCHOOL = #{chilJuniorhighschool},
+            </if>
+            <if test="chilUniversity != null">
+                CHIL_UNIVERSITY = #{chilUniversity},
+            </if>
+            <if test="chilSchoolclass != null and chilSchoolclass != ''">
+                CHIL_SCHOOLCLASS = #{chilSchoolclass},
+            </if>
+            <if test="chilUniversitydate != null">
+                CHIL_UNIVERSITYDATE = #{chilUniversitydate},
+            </if>
+            <if test="chilMessagetime != null">
+                CHIL_MESSAGETIME = #{chilMessagetime},
+            </if>
+            <if test="chilOccup != null and chilOccup != ''">
+                CHIL_OCCUP = #{chilOccup},
+            </if>
+            <if test="chilUnitimmu != null and chilUnitimmu != ''">
+                CHIL_UNITIMMU = #{chilUnitimmu},
+            </if>
+            <if test="chilHealthno != null and chilHealthno != ''">
+                CHIL_HEALTHNO = #{chilHealthno},
+            </if>
+            <if test="chilEditDate != null">
+                CHIL_EDIT_DATE = #{chilEditDate},
+            </if>
+            <if test="chilCarddepaid != null and chilCarddepaid != ''">
+                CHIL_CARDDEPAID = #{chilCarddepaid},
+            </if>
+            <if test="chilCityno != null and chilCityno != ''">
+                CHIL_CITYNO = #{chilCityno},
+            </if>
+            <if test="chilTicketdepaid != null and chilTicketdepaid != ''">
+                CHIL_TICKETDEPAID = #{chilTicketdepaid},
+            </if>
+            <if test="chilTicketno != null and chilTicketno != ''">
+                CHIL_TICKETNO = #{chilTicketno},
+            </if>
+            <if test="chilTicketdate != null">
+                CHIL_TICKETDATE = #{chilTicketdate},
+            </if>
+            <if test="chilMotherno != null and chilMotherno != ''">
+                CHIL_MOTHERNO = #{chilMotherno},
+            </if>
+            <if test="chilFatherno != null and chilFatherno != ''">
+                CHIL_FATHERNO = #{chilFatherno},
+            </if>
+            <if test="chilBcgScar != null and chilBcgScar != ''">
+                CHIL_BCG_SCAR = #{chilBcgScar},
+            </if>
+            <if test="chilResidenceclient != null and chilResidenceclient != ''">
+                CHIL_RESIDENCECLIENT = #{chilResidenceclient},
+            </if>
+            <if test="chilAttributive != null and chilAttributive != ''">
+                CHIL_ATTRIBUTIVE = #{chilAttributive},
+            </if>
+            <if test="chilHepbintime != null and chilHepbintime != ''">
+                CHIL_HEPBINTIME = #{chilHepbintime},
+            </if>
+            <if test="chilLeaveremark != null and chilLeaveremark != ''">
+                CHIL_LEAVEREMARK = #{chilLeaveremark},
+            </if>
+            <if test="chilTranscontrol != null and chilTranscontrol != ''">
+                CHIL_TRANSCONTROL = #{chilTranscontrol},
+            </if>
+            <if test="chilAddressdistrict != null and chilAddressdistrict != ''">
+                CHIL_ADDRESSDISTRICT = #{chilAddressdistrict},
+            </if>
+            <if test="chilMothercode != null and chilMothercode != ''">
+                CHIL_MOTHERCODE = #{chilMothercode},
+            </if>
+            <if test="chilFathercode != null and chilFathercode != ''">
+                CHIL_FATHERCODE = #{chilFathercode},
+            </if>
+            <if test="chilFlpeId != null and chilFlpeId != ''">
+                CHIL_FLPE_ID = #{chilFlpeId},
+            </if>
+            <if test="chilProvince != null and chilProvince != ''">
+                CHIL_PROVINCE = #{chilProvince},
+            </if>
+            <if test="chilBirthhospitalname != null and chilBirthhospitalname != ''">
+                CHIL_BIRTHHOSPITALNAME = #{chilBirthhospitalname},
+            </if>
+            <if test="chilFastref != null">
+                CHIL_FASTREF = #{chilFastref},
+            </if>
+            <if test="chilIdxUplState != null and chilIdxUplState != ''">
+                CHIL_IDX_UPL_STATE = #{chilIdxUplState},
+            </if>
+            <if test="chilIdxUplErrDes != null and chilIdxUplErrDes != ''">
+                CHIL_IDX_UPL_ERR_DES = #{chilIdxUplErrDes},
+            </if>
+            <if test="chilContactaddress != null and chilContactaddress != ''">
+                CHIL_CONTACTADDRESS = #{chilContactaddress},
+            </if>
+            <if test="chilMotheraddress != null and chilMotheraddress != ''">
+                CHIL_MOTHERADDRESS = #{chilMotheraddress},
+            </if>
+            <if test="chilFatheraddress != null and chilFatheraddress != ''">
+                CHIL_FATHERADDRESS = #{chilFatheraddress},
+            </if>
+            <if test="chilBinding != null and chilBinding != ''">
+                CHIL_BINDING = #{chilBinding},
+            </if>
+            <if test="chilMessagetype != null and chilMessagetype != ''">
+                CHIL_MESSAGETYPE = #{chilMessagetype},
+            </if>
+            <if test="chilMessagefreeze != null and chilMessagefreeze != ''">
+                CHIL_MESSAGEFREEZE = #{chilMessagefreeze},
+            </if>
+            <if test="chilVideCode != null and chilVideCode != ''">
+                CHIL_VIDE_CODE = #{chilVideCode},
+            </if>
+            <if test="chilGuardQq != null and chilGuardQq != ''">
+                CHIL_GUARD_QQ = #{chilGuardQq},
+            </if>
+            <if test="chilNewbornMark2 != null and chilNewbornMark2 != ''">
+                CHIL_NEWBORN_MARK2 = #{chilNewbornMark2},
+            </if>
+            <if test="chilAttributiveeditdate != null">
+                CHIL_ATTRIBUTIVEEDITDATE = #{chilAttributiveeditdate},
+            </if>
+            <if test="chilMovetype != null and chilMovetype != ''">
+                CHIL_MOVETYPE = #{chilMovetype},
+            </if>
+            <if test="chilLastinocdate != null">
+                CHIL_LASTINOCDATE = #{chilLastinocdate},
+            </if>
+            <if test="chilInoctype != null and chilInoctype != ''">
+                CHIL_INOCTYPE = #{chilInoctype},
+            </if>
+            <if test="chilCreatetype != null and chilCreatetype != ''">
+                CHIL_CREATETYPE = #{chilCreatetype},
+            </if>
+            <if test="chilFamily != null and chilFamily != ''">
+                CHIL_FAMILY = #{chilFamily},
+            </if>
+            <if test="chilRelation != null and chilRelation != ''">
+                CHIL_RELATION = #{chilRelation},
+            </if>
+            <if test="chilRelationId != null and chilRelationId != ''">
+                CHIL_RELATION_ID = #{chilRelationId},
+            </if>
+            <if test="chilRelationdate != null">
+                CHIL_RELATIONDATE = #{chilRelationdate},
+            </if>
+            <if test="chilCaseUplState != null and chilCaseUplState != ''">
+                CHIL_CASE_UPL_STATE = #{chilCaseUplState},
+            </if>
+            <if test="chilCaseUplDesc != null and chilCaseUplDesc != ''">
+                CHIL_CASE_UPL_DESC = #{chilCaseUplDesc},
+            </if>
+            <if test="chilCreateType != null">
+                CHIL_CREATE_TYPE = #{chilCreateType},
+            </if>
+            <if test="chilNameInitial != null and chilNameInitial != ''">
+                CHIL_NAME_INITIAL = #{chilNameInitial},
+            </if>
+            <if test="chilAddressDepaCode != null and chilAddressDepaCode != ''">
+                CHIL_ADDRESS_DEPA_CODE = #{chilAddressDepaCode},
+            </if>
+            <if test="chilHeight != null and chilHeight != ''">
+                CHIL_HEIGHT = #{chilHeight},
+            </if>
+            <if test="chilPartusType != null and chilPartusType != ''">
+                CHIL_PARTUS_TYPE = #{chilPartusType},
+            </if>
+            <if test="chilKind != null and chilKind != ''">
+                CHIL_KIND = #{chilKind},
+            </if>
+            <if test="chilEditSite != null and chilEditSite != ''">
+                CHIL_EDIT_SITE = #{chilEditSite},
+            </if>
+            <if test="chilEditSiteName != null and chilEditSiteName != ''">
+                CHIL_EDIT_SITE_NAME = #{chilEditSiteName},
+            </if>
+            <if test="chilCardType != null and chilCardType != ''">
+                CHIL_CARD_TYPE = #{chilCardType},
+            </if>
+            <if test="chilCard != null and chilCard != ''">
+                CHIL_CARD = #{chilCard},
+            </if>
+            <if test="chilFathercardType != null and chilFathercardType != ''">
+                CHIL_FATHERCARD_TYPE = #{chilFathercardType},
+            </if>
+            <if test="chilMothercardType != null and chilMothercardType != ''">
+                CHIL_MOTHERCARD_TYPE = #{chilMothercardType},
+            </if>
+            <if test="chilVersion != null">
+                CHIL_VERSION = #{chilVersion},
+            </if>
+            <if test="chilOtherGuardiantel != null and chilOtherGuardiantel != ''">
+                CHIL_OTHER_GUARDIANTEL = #{chilOtherGuardiantel},
+            </if>
+            <if test="chilOtherGuardianRelation != null and chilOtherGuardianRelation != ''">
+                CHIL_OTHER_GUARDIAN_RELATION = #{chilOtherGuardianRelation},
+            </if>
+        </set>
+        where CHIL_ID = #{chilId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete
+        from VACCSHENZHEN.CHILD
+        where CHIL_ID = #{chilId}
+    </delete>
+</mapper>
+

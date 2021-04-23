@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration name="test-cfg" status="off" monitorInterval="0">
+
+    <!-- 常量引用 -->
+    <properties>
+        <Property name="LOG_HOME">/tmp/logs/ssmp</Property>
+        <property name="FORMAT">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</property>
+    </properties>
+
+    <appenders>
+        <!-- 常见的输出到console,常用于开发环境中,默认是system_err,还有一个system_out -->
+        <console name="console" target="system_out">
+            <!-- appender级别的日志过滤 -->
+            <!-- <thresholdFilter level="info" onMatch="accept" onMismatch="deny"/> -->
+            <patternLayout pattern="${FORMAT}" />
+        </console>
+
+        <!--Info级别日志输出-->
+        <RollingRandomAccessFile name="infoFile"
+                                 fileName="${LOG_HOME}/info.log"
+                                 filePattern="${LOG_HOME}/info-%d{yyyy-MM-dd}-%i.log">
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY" />
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+            <PatternLayout pattern="${FORMAT}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+            <DefaultRolloverStrategy max="30" />
+        </RollingRandomAccessFile>
+        <!--warn级别日志输出-->
+        <RollingRandomAccessFile name="warnFile"
+                                 fileName="${LOG_HOME}/warn.log"
+                                 filePattern="${LOG_HOME}/warn-%d{yyyy-MM-dd}-%i.log">
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout pattern="${FORMAT}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="30" />
+        </RollingRandomAccessFile>
+
+        <!--Error级别日志输出-->
+        <RollingRandomAccessFile name="errorFile"
+                                 fileName="${LOG_HOME}/error.log"
+                                 filePattern="${LOG_HOME}/error-%d{yyyy-MM-dd}-%i.log">
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+            <PatternLayout pattern="${FORMAT}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="30" />
+        </RollingRandomAccessFile>
+    </appenders>
+
+    <!-- 接收appender -->
+    <loggers>
+        <logger name="org.apache.http" level="WARN" />
+        <!-- Spring -->
+        <logger name="org.springframework" level="WARN" />
+        <!-- mybatis loggers -->
+        <logger name="com.ibatis" level="DEBUG" />
+        <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG" />
+        <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />
+        <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG" />
+        <!-- sql loggers -->
+        <logger name="java.sql.Connection" level="DEBUG"  additivity="true"/>
+        <logger name="java.sql.Statement" level="DEBUG" additivity="true" />
+        <logger name="java.sql.PreparedStatement" level="=debug,stdout"  additivity="true"/>
+        <logger name="java.sql.ResultSet" level="DEBUG"  additivity="true"/>
+        <!-- General Apache libraries -->
+        <logger name="org.apache" level="WARN" />
+        <!-- Default Shiro logging -->
+        <logger name="org.apache.shiro" level="WARN" />
+        <!-- Disable verbose logging -->
+        <logger name="org.apache.shiro.util.ThreadContext" level="WARN" />
+        <logger name="org.apache.shiro.cache.ehcache.EhCache" level="WARN" />
+        <!-- 对包进行更详细的配置 -->
+        <!-- additivity表示是否追加,防止重复,因为root已经接收过一次了 -->
+        <!--<logger name="com.wslg.user" level="DEBUG" additivity="false">-->
+        <!--<appender-ref ref="console" />-->
+        <!--</logger>-->
+
+        <root level="DEBUG">
+            <appender-ref ref="console" />
+            <appender-ref ref="infoFile" />
+            <appender-ref ref="warnFile" />
+            <appender-ref ref="errorFile" />
+        </root>
+    </loggers>
+
+</configuration>
