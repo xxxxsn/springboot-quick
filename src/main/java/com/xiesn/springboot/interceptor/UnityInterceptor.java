@@ -1,9 +1,14 @@
 package com.xiesn.springboot.interceptor;
 
+import cn.hutool.core.util.CharsetUtil;
+import cn.hutool.http.ContentType;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.xiesn.springboot.constant.ConstantDefine;
+import com.xiesn.springboot.utils.ResponseCode;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import net.dreamlu.mica.core.result.R;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.ThreadContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,11 +65,11 @@ public class UnityInterceptor implements HandlerInterceptor {
         if (methodAnnotation == null) {
             return true;
         }
-
         //*根据token判断用户是否登录过
         String token = request.getHeader("token");
         if (StringUtils.isEmpty(token)) {
             log.warn("为获取到token");
+            handleFalseResponse(response);
             return false;
         }
         String userJson = redisTemplate.opsForValue().get(token);
@@ -99,6 +104,16 @@ public class UnityInterceptor implements HandlerInterceptor {
 //        if(consumeTime > 300) {
         log.debug("API-Service >>> URL = [" + String.format("%s] consume = %d millis", httpServletRequest.getRequestURI(), consumeTime));
 //        }
+    }
+
+    @SneakyThrows
+    private void handleFalseResponse(HttpServletResponse response){
+        response.setContentType(ContentType.JSON.getValue());
+        response.setCharacterEncoding(CharsetUtil.UTF_8);
+        response.setStatus(ResponseCode.SERVICE_LOGIN_EXCEED.getCode());
+        String result = JSON.toJSONString(R.fail(ResponseCode.SERVICE_LOGIN_EXCEED));
+        response.getWriter().write(result);
+        response.getWriter().flush();
     }
 
 

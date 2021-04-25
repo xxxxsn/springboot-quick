@@ -1,83 +1,78 @@
 package com.xiesn.springboot.utils;
 
+import io.swagger.annotations.ApiModel;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import net.dreamlu.mica.core.result.IResultCode;
+
 import java.text.MessageFormat;
 import java.util.Objects;
 
 /**
  * FileName: ResponseCode
  * Author:   xiesn
- * <p>
- * <p>
- * <p>
- * =================================严重声明================================================
- * =================================严重声明================================================
- * <p>
- * <p>
- * 各模块错误码定义: 100开头为系统定义；200开头为商品;300开头为用户系统；400开头为订单系统；
- * 500开头为购物车；600开头为促销；700开头为支付;800开头为优惠券; 900库存服务  未完待续。。。。。。。。。
- * <p>
- *
- * <p>
- * <p>
- * <p>
- * <p>
- * =================================严重声明================================================
- * =================================严重声明================================================
  */
 
-public enum ResponseCode {
+@Getter
+@RequiredArgsConstructor
+@ApiModel(description = "系统内置code")
+public enum ResponseCode  implements IResultCode {
+
 
     /**
-     * 操作成功
+     *  系统（通用）级别的异常
      */
-    SUCCESS(200, "操作成功"),
+    FAILURE(-1, "系统未知异常"),
+    SUCCESS(1, "操作成功"),
+    SYSTEM_HITS(-2, "{0}"),
     SERVICE_LOGIN_EXCEED(302, "登录过期"),
     SERVICE_RUNTIMEEXCEPTION(555, "逻辑异常"),
-    SERVICE_EXCEPTION(558, "系统异常"),
-    SERVICE_UNAVAILABLE(559, "服务器内部异常"),
+    SERVICE_LOGIN_EXCEPTION(556, "操作异常"),
+    SERVICE_UNAVAILABLE(557, "服务器内部异常"),
+
 
     /**
-     * 000-010  系统（通用）级别的
-     * 100-900  业务逻辑级别
+     *  访问层 code   000-099
      */
-    WSLG_SYSTEM_HITS(100000, "{0}"),
-    WSLG_MISS_PARAMETERS(100001, "缺少必要参数"),
-    WSLG_INVALID_PARAMETERS(100002, "输入参数非法"),
-    WSLG_BUSINESS_FAIL(100003, "操作失败，请重试!{0}"),
-    WSLG_RESULT_EMPTY(100004, "查询结果为空");
+    PARAM_MISS(100000, "缺少必要的请求参数"),
+    PARAM_TYPE_ERROR(100001, "请求参数类型错误"),
+    PARAM_BIND_ERROR(100002, "请求参数绑定错误"),
+    PARAM_VALID_ERROR(100002, "参数校验失败"),
+    NOT_FOUND(100004, "404 没找到请求"),
+    MSG_NOT_READABLE(100005, "消息不能读取"),
+    METHOD_NOT_SUPPORTED(100006, "不支持当前请求方法"),
+    MEDIA_TYPE_NOT_SUPPORTED(100007, "不支持当前媒体类型"),
+    MEDIA_TYPE_NOT_ACCEPT(100008, "不接受的媒体类型"),
+    REQ_REJECT(100009, "请求被拒绝"),
+
+    /**
+     *  通用数据层 code   100-999
+     */
+    DATA_NOT_EXIST(100100, "数据不存在"),
+    DATA_EXISTED(100101, "数据已存在"),
+    DATA_ADD_FAILED(100102, "数据添加失败"),
+    DATA_UPDATE_FAILED(100103, "数据更新失败"),
+    DATA_DELETE_FAILED(100104, "数据删除失败"),
 
 
+    ;
 
 
-    private int code;
-    private String msg;
+    /**
+     * code编码
+     */
+    final int code;
+    /**
+     * 中文信息描述
+     */
+    final String msg;
 
-    ResponseCode(int code, String msg) {
-        this.code = code;
-        this.msg = msg;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getmsg() {
-        return msg;
-    }
-
-    public void setmsg(String msg) {
-        this.msg = msg;
-    }
 
     public String formatResponseMessage(String... msg) {
         if (Objects.nonNull(msg)) {
-            return MessageFormat.format(this.getmsg(), msg);
+            return MessageFormat.format(this.getMsg(), msg);
         } else {
-            return MessageFormat.format(this.getmsg(), "");
+            return MessageFormat.format(this.getMsg(), "");
         }
     }
 
@@ -85,34 +80,34 @@ public enum ResponseCode {
         if (objs == null || responseCode == null) {
             return null;
         }
-        return MessageFormat.format(responseCode.getmsg(), objs);
+        return MessageFormat.format(responseCode.getMsg(), objs);
     }
 
     public static final String formatMissParameters(Object[] objs) {
         if (objs == null) {
             return null;
         }
-        return MessageFormat.format(WSLG_MISS_PARAMETERS.getmsg(), objs);
+        return MessageFormat.format(ResponseCode.PARAM_MISS.getMsg(), objs);
     }
 
     public static final String formatInvalidParameters(Object[] objs) {
         if (objs == null) {
             return null;
         }
-        return MessageFormat.format(WSLG_INVALID_PARAMETERS.getmsg(), objs);
+        return MessageFormat.format(ResponseCode.PARAM_BIND_ERROR.getMsg(), objs);
     }
 
     public static final String formatBusinessFail(Object[] objs) {
         if (objs == null) {
             return null;
         }
-        return MessageFormat.format(WSLG_BUSINESS_FAIL.getmsg(), objs);
+        return MessageFormat.format(ResponseCode.FAILURE.getMsg(), objs);
     }
 
     public static final String formatSystemHits(String... objs) {
         if (objs == null) {
             return null;
         }
-        return MessageFormat.format(WSLG_SYSTEM_HITS.getmsg(), objs);
+        return MessageFormat.format(SYSTEM_HITS.getMsg(), objs);
     }
 }

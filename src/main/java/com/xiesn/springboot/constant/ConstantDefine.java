@@ -23,4 +23,11 @@ public class ConstantDefine {
     }
 
 
+    public static class CacheConstant {
+
+        public static final String ADULT_KEY = "adult:name:age";
+
+    }
+
+
 }
