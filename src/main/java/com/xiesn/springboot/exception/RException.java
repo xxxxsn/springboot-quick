@@ -6,7 +6,7 @@ import lombok.Data;
  * 自定义异常
  */
 @Data
-public class CustomException extends Exception{
+public class RException extends Exception{
 
     /**
 	 * 
@@ -23,7 +23,7 @@ public class CustomException extends Exception{
 	 */
 	private boolean persistent = false;
 	
-	public CustomException(int errCode, String errMsg){
+	public RException(int errCode, String errMsg){
 		super(errMsg);
 		this.code = errCode;
 		this.msg = errMsg;
