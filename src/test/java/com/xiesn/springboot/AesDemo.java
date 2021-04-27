@@ -4,6 +4,7 @@ import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.digest.DigestAlgorithm;
+import net.dreamlu.mica.http.HttpRequest;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -12,6 +13,23 @@ import java.util.Map;
 public class AesDemo {
 
     public static final String DEFAULT_KEY = "XclgZZ2ga72gqvJR";
+
+
+    @Test
+    public void aa(){
+        String s = HttpRequest.get("https://api.linkedin.com/v2/emailAddress?q=members&projection=(elements*(handle~))")
+                .addHeader("Host", "api.linkedin.com")
+                .addHeader("Connection", "Keep-Alive")
+                .addHeader("Authorization", "Bearer " + "")
+                .execute()
+                .asJsonNode()
+                .at("/elements/0/handle~0/emailAddress")
+                .asText();
+        System.err.println(s);
+
+    }
+
+
 
     @Test
     public void aesTest() {

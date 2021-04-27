@@ -24,6 +24,7 @@ import java.util.List;
 public class AdultServiceImpl extends ServiceImpl<AdultMapper, Adult> implements IAdultService {
 
     @Override
+    //缓存#50秒
     @Cacheable(value = ConstantDefine.CacheConstant.ADULT_KEY+"#50s", key = "#name")
     public List<Adult> selectListByName(String name) {
         List<Adult> adults = baseMapper.selectList(Wrappers.<Adult>lambdaQuery().eq(Adult::getChilName, name));

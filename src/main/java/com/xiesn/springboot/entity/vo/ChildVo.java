@@ -15,7 +15,8 @@ import java.util.Date;
 @HeadFontStyle
 @HeadStyle()
 @ContentStyle(horizontalAlignment= HorizontalAlignment.CENTER)
-public class ChildVO {
+public class ChildVo {
+
 
     @ExcelProperty("ID")
     private Integer chilId;

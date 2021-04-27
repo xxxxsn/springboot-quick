@@ -1,4 +1,4 @@
-package com.xiesn.springboot.component;
+package com.xiesn.springboot.listener;
 
 import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
